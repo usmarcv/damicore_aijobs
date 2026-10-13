@@ -1,0 +1,127 @@
+<title>Solução para maior salário</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; the solution sheet and the evidence chart carry the page, method and tables follow. */
+:root {
+  --bg: #f6f8f9; --surface: #ffffff; --ink: #16242c; --ink-2: #4a5d68; --ink-3: #74858f;
+  --rule: #d5dde2; --accent: #1f6f8b; --accent-soft: #dcebf0; --muted-fill: #e9eef1;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #10181d; --surface: #172229; --ink: #e6edf1; --ink-2: #a9b8c1; --ink-3: #7f909a;
+  --rule: #2a3942; --accent: #58a9c4; --accent-soft: #1d3a46; --muted-fill: #1f2c34; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #10181d; --surface: #172229; --ink: #e6edf1; --ink-2: #a9b8c1; --ink-3: #7f909a;
+  --rule: #2a3942; --accent: #58a9c4; --accent-soft: #1d3a46; --muted-fill: #1f2c34; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.55; padding-inline: 16px; padding-block: 40px 64px; }
+main { max-width: 780px; margin-inline: auto; display: flex; flex-direction: column; gap: 44px; }
+section, header { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+h1 { font-size: 2rem; line-height: 1.15; font-weight: 600; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h2 { font-size: 1.2rem; font-weight: 600; margin: 0; text-wrap: balance; }
+p { margin: 0; max-width: 66ch; }
+.eyebrow { font-family: var(--mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+.lead { font-size: 1.1rem; color: var(--ink); }
+.note { color: var(--ink-2); font-size: .92rem; }
+code { font-family: var(--mono); font-size: .88em; }
+.scroll { overflow-x: auto; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+th, td { text-align: left; padding: 8px 12px; vertical-align: top; border-bottom: 1px solid var(--rule); }
+tr:last-child > td { border-bottom: 0; }
+thead th { font-family: var(--mono); font-size: .72rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.col { font-family: var(--mono); font-size: .84rem; color: var(--ink-2); white-space: nowrap; }
+td.val { font-weight: 600; }
+th.cl { font-family: var(--mono); font-size: .78rem; font-weight: 500; color: var(--ink-2); white-space: nowrap; background: var(--muted-fill); border-right: 1px solid var(--rule); }
+tr.w1 td.val { font-weight: 400; color: var(--ink-3); }
+.pill { display: inline-block; font-size: .75rem; padding: 1px 8px; border-radius: 999px; white-space: nowrap; border: 1px solid var(--rule); color: var(--ink-2); }
+.pill.w3 { background: var(--accent); border-color: var(--accent); color: var(--surface); font-weight: 600; }
+.pill.w2 { background: var(--accent-soft); border-color: var(--accent-soft); color: var(--ink); }
+.pill.w1 { border-style: dashed; color: var(--ink-3); }
+.chart { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 18px 16px; display: flex; flex-direction: column; gap: 10px; }
+.chart-head { display: grid; grid-template-columns: 64px 1fr; gap: 12px; font-family: var(--mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+.bar-row { display: grid; grid-template-columns: 64px 1fr; gap: 2px 12px; align-items: center; }
+.bar-label { font-family: var(--mono); font-size: .85rem; color: var(--ink-2); grid-row: span 2; }
+.bar-track { position: relative; display: flex; align-items: center; gap: 8px; min-width: 0; }
+.bar-track::before { content: ""; position: absolute; left: 53.9%; top: -4px; bottom: -4px; border-left: 1px dashed var(--ink-3); }
+.bar { height: 18px; background: var(--accent); border-radius: 0 4px 4px 0; flex: 0 0 auto; }
+.bar-row:hover .bar { filter: brightness(1.12); }
+.bar-value { font-size: .88rem; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bar-meta { font-size: .78rem; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.legend { font-size: .8rem; color: var(--ink-3); display: flex; align-items: center; gap: 8px; }
+.legend i { display: inline-block; height: 14px; border-left: 1px dashed var(--ink-3); }
+ol.steps { margin: 0; padding-left: 1.3em; display: flex; flex-direction: column; gap: 10px; max-width: 66ch; }
+ul.plain { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 8px; max-width: 66ch; }
+footer { color: var(--ink-3); font-size: .82rem; border-top: 1px solid var(--rule); padding-top: 14px; }
+</style>
+<main>
+<header>
+  <div class="eyebrow">DAMICORE · um ciclo de otimização · só o dataset do quartil</div>
+  <h1>Solução escolhida para maior salário</h1>
+  <p class="lead">Entre quem já está no quartil mais bem pago, os salários mais altos se concentram em executivos com mais de 13,5 anos de experiência que gerem pessoas, em finanças, numa empresa grande dos EUA e morando nos EUA. As linhas reais que mais se parecem com esse perfil têm salário mediano de US$ 219.716, contra US$ 164.436 no quartil. O maior salário desse grupo é US$ 352.584; o maior do quartil inteiro é US$ 372.347.</p>
+  <p class="note">Base: apenas <code>salary_dataset_q1_main.csv</code>, 1.250 linhas. O ciclo seleciona dentro dele as 313 mais bem pagas (a partir de US$ 194.051) e procura o que as distingue das demais. A solução usa só as 20 colunas acionáveis dos 7 clusters.</p>
+</header>
+
+<section>
+  <h2>A solução, cluster a cluster</h2>
+  <p class="note">Cada cluster contribui com seu melhor bloco de valores. O peso indica quanto a coluna, sozinha, muda a chance de estar entre as selecionadas. Onde o peso é quase nenhum, o valor mostrado pode ser trocado sem alterar o resultado.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Cluster</th><th>Coluna</th><th>Valor escolhido</th><th class="n">Selecionadas</th><th class="n">Mediana</th><th class="n">Máximo</th><th>Peso</th></tr></thead>
+    <tbody><tr class="w3 first"><th scope="rowgroup" rowspan="5" class="cl">Cluster 0</th><td class="col">job_title</td><td class="val">Data Science Manager</td><td class="n">39%</td><td class="n">US$ 178.467</td><td class="n">US$ 372.347</td><td><span class="pill w3">forte</span></td></tr><tr class="w3"><td class="col">experience_level</td><td class="val">Executive</td><td class="n">55%</td><td class="n">US$ 201.476</td><td class="n">US$ 361.230</td><td><span class="pill w3">forte</span></td></tr><tr class="w3"><td class="col">industry</td><td class="val">Finance</td><td class="n">32%</td><td class="n">US$ 172.485</td><td class="n">US$ 352.584</td><td><span class="pill w3">forte</span></td></tr><tr class="w2"><td class="col">education_level</td><td class="val">Masters</td><td class="n">26%</td><td class="n">US$ 167.042</td><td class="n">US$ 361.230</td><td><span class="pill w2">moderado</span></td></tr><tr class="w2"><td class="col">primary_language</td><td class="val">Python</td><td class="n">26%</td><td class="n">US$ 165.093</td><td class="n">US$ 372.347</td><td><span class="pill w2">moderado</span></td></tr><tr class="w1 first"><th scope="rowgroup" rowspan="1" class="cl">Cluster 1</th><td class="col">employment_type</td><td class="val">Full-time</td><td class="n">25%</td><td class="n">US$ 165.020</td><td class="n">US$ 372.347</td><td><span class="pill w1">quase nenhum</span></td></tr><tr class="w3 first"><th scope="rowgroup" rowspan="4" class="cl">Cluster 2</th><td class="col">company_size</td><td class="val">L</td><td class="n">34%</td><td class="n">US$ 171.764</td><td class="n">US$ 372.347</td><td><span class="pill w3">forte</span></td></tr><tr class="w3"><td class="col">company_location</td><td class="val">US</td><td class="n">30%</td><td class="n">US$ 170.473</td><td class="n">US$ 372.347</td><td><span class="pill w3">forte</span></td></tr><tr class="w3"><td class="col">employee_residence</td><td class="val">US</td><td class="n">29%</td><td class="n">US$ 169.456</td><td class="n">US$ 372.347</td><td><span class="pill w3">forte</span></td></tr><tr class="w2"><td class="col">remote_ratio</td><td class="val">50</td><td class="n">27%</td><td class="n">US$ 166.025</td><td class="n">US$ 352.584</td><td><span class="pill w2">moderado</span></td></tr><tr class="w3 first"><th scope="rowgroup" rowspan="3" class="cl">Cluster 3</th><td class="col">years_experience</td><td class="val">alto (acima de 13.5)</td><td class="n">43%</td><td class="n">US$ 183.514</td><td class="n">US$ 361.230</td><td><span class="pill w3">forte</span></td></tr><tr class="w1"><td class="col">ai_tools_hours_per_week</td><td class="val">médio (6.53 a 11.7)</td><td class="n">26%</td><td class="n">US$ 163.681</td><td class="n">US$ 372.347</td><td><span class="pill w1">quase nenhum</span></td></tr><tr class="w2"><td class="col">upskilling_hours_per_month</td><td class="val">alto (acima de 10.2)</td><td class="n">24%</td><td class="n">US$ 161.529</td><td class="n">US$ 372.347</td><td><span class="pill w2">moderado</span></td></tr><tr class="w2 first"><th scope="rowgroup" rowspan="4" class="cl">Cluster 4</th><td class="col">has_ml_in_title</td><td class="val">True</td><td class="n">28%</td><td class="n">US$ 166.612</td><td class="n">US$ 352.584</td><td><span class="pill w2">moderado</span></td></tr><tr class="w3"><td class="col">manages_people</td><td class="val">True</td><td class="n">42%</td><td class="n">US$ 181.772</td><td class="n">US$ 361.230</td><td><span class="pill w3">forte</span></td></tr><tr class="w1"><td class="col">uses_ai_tools_daily</td><td class="val">True</td><td class="n">26%</td><td class="n">US$ 165.344</td><td class="n">US$ 372.347</td><td><span class="pill w1">quase nenhum</span></td></tr><tr class="w1"><td class="col">switched_jobs_last_year</td><td class="val">True</td><td class="n">25%</td><td class="n">US$ 162.006</td><td class="n">US$ 352.584</td><td><span class="pill w1">quase nenhum</span></td></tr><tr class="w1 first"><th scope="rowgroup" rowspan="2" class="cl">Cluster 5</th><td class="col">team_size</td><td class="val">alto (acima de 9)</td><td class="n">25%</td><td class="n">US$ 163.451</td><td class="n">US$ 352.584</td><td><span class="pill w1">quase nenhum</span></td></tr><tr class="w2"><td class="col">certifications_count</td><td class="val">alto (acima de 3)</td><td class="n">28%</td><td class="n">US$ 168.997</td><td class="n">US$ 309.068</td><td><span class="pill w2">moderado</span></td></tr><tr class="w2 first"><th scope="rowgroup" rowspan="1" class="cl">Cluster 6</th><td class="col">weekly_hours</td><td class="val">alto (acima de 48.3)</td><td class="n">29%</td><td class="n">US$ 171.764</td><td class="n">US$ 372.347</td><td><span class="pill w2">moderado</span></td></tr></tbody>
+  </table></div>
+  <p class="note">“Selecionadas” é a parcela das linhas com aquele valor que está entre as mais bem pagas do quartil (a base é 25%). “Mediana” e “Máximo” são o <code>salary_usd</code> mediano e o maior entre essas linhas.</p>
+</section>
+
+<section>
+  <h2>O salário sobe conforme a linha se aproxima da solução</h2>
+  <p>Contei, em cada uma das 1.250 linhas, quantas das 8 colunas de peso forte têm o valor escolhido. O salário mediano cresce a cada coluna a mais.</p>
+  <div class="chart" role="img" aria-label="Salário mediano por número de colunas fortes casadas com a solução">
+    <div class="chart-head"><span>Casadas</span><span>Salário mediano (salary_usd)</span></div>
+    <div class="bar-row" title="0 colunas: US$ 140.132, 64 linhas, 2% entre as selecionadas"><div class="bar-label">0</div><div class="bar-track"><div class="bar" style="width:45.9%"></div><span class="bar-value">US$ 140.132</span></div><div class="bar-meta">64 linhas · 2% entre as selecionadas · maior salário US$ 207.507</div></div><div class="bar-row" title="1 colunas: US$ 142.929, 115 linhas, 3% entre as selecionadas"><div class="bar-label">1</div><div class="bar-track"><div class="bar" style="width:46.8%"></div><span class="bar-value">US$ 142.929</span></div><div class="bar-meta">115 linhas · 3% entre as selecionadas · maior salário US$ 229.764</div></div><div class="bar-row" title="2 colunas: US$ 154.344, 354 linhas, 10% entre as selecionadas"><div class="bar-label">2</div><div class="bar-track"><div class="bar" style="width:50.6%"></div><span class="bar-value">US$ 154.344</span></div><div class="bar-meta">354 linhas · 10% entre as selecionadas · maior salário US$ 282.289</div></div><div class="bar-row" title="3 colunas: US$ 162.174, 347 linhas, 22% entre as selecionadas"><div class="bar-label">3</div><div class="bar-track"><div class="bar" style="width:53.1%"></div><span class="bar-value">US$ 162.174</span></div><div class="bar-meta">347 linhas · 22% entre as selecionadas · maior salário US$ 276.550</div></div><div class="bar-row" title="4 colunas: US$ 186.976, 221 linhas, 45% entre as selecionadas"><div class="bar-label">4</div><div class="bar-track"><div class="bar" style="width:61.3%"></div><span class="bar-value">US$ 186.976</span></div><div class="bar-meta">221 linhas · 45% entre as selecionadas · maior salário US$ 372.347</div></div><div class="bar-row" title="5 colunas: US$ 207.927, 101 linhas, 60% entre as selecionadas"><div class="bar-label">5</div><div class="bar-track"><div class="bar" style="width:68.1%"></div><span class="bar-value">US$ 207.927</span></div><div class="bar-meta">101 linhas · 60% entre as selecionadas · maior salário US$ 361.230</div></div><div class="bar-row" title="6 a 8 colunas: US$ 219.716, 48 linhas, 81% entre as selecionadas"><div class="bar-label">6 a 8</div><div class="bar-track"><div class="bar" style="width:72.0%"></div><span class="bar-value">US$ 219.716</span></div><div class="bar-meta">48 linhas · 81% entre as selecionadas · maior salário US$ 352.584</div></div>
+    <div class="legend"><i></i> mediana do quartil: US$ 164.436 · maior salário do quartil: US$ 372.347</div>
+  </div>
+  <p class="note">Colunas de peso forte: <code>job_title</code>, <code>experience_level</code>, <code>industry</code>, <code>company_size</code>, <code>company_location</code>, <code>employee_residence</code>, <code>years_experience</code>, <code>manages_people</code>.</p>
+</section>
+
+<section>
+  <h2>Como o ciclo foi aplicado</h2>
+  <ol class="steps">
+    <li><b>DAMICORE.</b> As 27 colunas do quartil já estavam agrupadas em 7 clusters. Usei esses clusters como estão, sem rodar o DAMICORE de novo.</li>
+    <li><b>Seleção.</b> Dentro do quartil, as 25% mais bem pagas.</li>
+    <li><b>Modelo probabilístico.</b> Para cada cluster, a frequência de cada bloco entre as selecionadas e no quartil inteiro. A razão entre as duas dá a chance de estar entre as selecionadas dado o bloco. Blocos com poucas linhas são puxados para o efeito de cada coluna isolada, e um valor só entra se aparecer em pelo menos 30 linhas.</li>
+    <li><b>Soluções candidatas.</b> Os 3 melhores blocos elegíveis de cada cluster, combinados entre os 7 clusters: 2.187 candidatas, ordenadas pelo produto das razões de chance.</li>
+    <li><b>Solução escolhida.</b> A candidata de maior pontuação, conferida contra linhas reais.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>As 10 melhores candidatas</h2>
+  <p class="note">Todas compartilham o mesmo núcleo; diferem em um ou dois clusters. A pontuação é relativa à escolhida e serve só para ordenar.</p>
+  <div class="scroll"><table>
+    <thead><tr><th class="n">#</th><th class="n">Pontuação</th><th>Diferença em relação à escolhida</th></tr></thead>
+    <tbody><tr><td class="n">1</td><td class="n">100%</td><td>Melhor bloco em todos os clusters (solução escolhida)</td></tr><tr><td class="n">2</td><td class="n">99%</td><td><b>Cluster 2</b>: company_size=L, company_location=US, employee_residence=US, remote_ratio=100</td></tr><tr><td class="n">3</td><td class="n">97%</td><td><b>Cluster 5</b>: team_size=médio (7 a 9), certifications_count=alto (acima de 3)</td></tr><tr><td class="n">4</td><td class="n">97%</td><td><b>Cluster 0</b>: job_title=Data Science Manager, experience_level=Executive, industry=Technology, education_level=PhD, primary_language=Python</td></tr><tr><td class="n">5</td><td class="n">97%</td><td><b>Cluster 2</b>: company_size=L, company_location=US, employee_residence=US, remote_ratio=100<br><b>Cluster 5</b>: team_size=médio (7 a 9), certifications_count=alto (acima de 3)</td></tr><tr><td class="n">6</td><td class="n">96%</td><td><b>Cluster 1</b>: employment_type=Contract</td></tr><tr><td class="n">7</td><td class="n">96%</td><td><b>Cluster 0</b>: job_title=Data Science Manager, experience_level=Executive, industry=Technology, education_level=PhD, primary_language=Python<br><b>Cluster 2</b>: company_size=L, company_location=US, employee_residence=US, remote_ratio=100</td></tr><tr><td class="n">8</td><td class="n">96%</td><td><b>Cluster 1</b>: employment_type=Contract<br><b>Cluster 2</b>: company_size=L, company_location=US, employee_residence=US, remote_ratio=100</td></tr><tr><td class="n">9</td><td class="n">94%</td><td><b>Cluster 5</b>: team_size=baixo (até 7), certifications_count=alto (acima de 3)</td></tr><tr><td class="n">10</td><td class="n">94%</td><td><b>Cluster 0</b>: job_title=Data Science Manager, experience_level=Executive, industry=Technology, education_level=PhD, primary_language=Python<br><b>Cluster 5</b>: team_size=médio (7 a 9), certifications_count=alto (acima de 3)</td></tr></tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>Melhor bloco de cada cluster</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Cluster</th><th>Bloco</th><th class="n">Linhas</th><th class="n">Selecionadas</th><th class="n">Estimativa</th><th class="n">Mediana</th><th class="n">Máximo</th></tr></thead>
+    <tbody><tr><td>Cluster 0</td><td>job_title = Data Science Manager, experience_level = Executive, industry = Finance, education_level = Masters, primary_language = Python</td><td class="n">1</td><td class="n">100%</td><td class="n">79%</td><td class="n">US$ 216.932</td><td class="n">US$ 216.932</td></tr><tr><td>Cluster 1</td><td>employment_type = Full-time</td><td class="n">1.114</td><td class="n">25%</td><td class="n">25%</td><td class="n">US$ 165.020</td><td class="n">US$ 372.347</td></tr><tr><td>Cluster 2</td><td>company_size = L, company_location = US, employee_residence = US, remote_ratio = 50.0</td><td class="n">84</td><td class="n">43%</td><td class="n">44%</td><td class="n">US$ 182.486</td><td class="n">US$ 352.584</td></tr><tr><td>Cluster 3</td><td>years_experience = alto (acima de 13.5), ai_tools_hours_per_week = médio (6.53 a 11.7), upskilling_hours_per_month = alto (acima de 10.2)</td><td class="n">42</td><td class="n">69%</td><td class="n">54%</td><td class="n">US$ 207.833</td><td class="n">US$ 340.887</td></tr><tr><td>Cluster 4</td><td>has_ml_in_title = True, manages_people = True, uses_ai_tools_daily = True, switched_jobs_last_year = True</td><td class="n">57</td><td class="n">53%</td><td class="n">50%</td><td class="n">US$ 198.756</td><td class="n">US$ 352.584</td></tr><tr><td>Cluster 5</td><td>team_size = alto (acima de 9), certifications_count = alto (acima de 3)</td><td class="n">57</td><td class="n">30%</td><td class="n">29%</td><td class="n">US$ 169.616</td><td class="n">US$ 267.056</td></tr><tr><td>Cluster 6</td><td>weekly_hours = alto (acima de 48.3)</td><td class="n">411</td><td class="n">29%</td><td class="n">29%</td><td class="n">US$ 171.764</td><td class="n">US$ 372.347</td></tr></tbody>
+  </table></div>
+  <p class="note">“Selecionadas” é a frequência observada nas linhas do bloco; “Estimativa” é o valor usado para ordenar, depois do ajuste para blocos com poucas linhas.</p>
+</section>
+
+<section>
+  <h2>Ressalvas</h2>
+  <ul class="plain">
+    <li>Tudo é medido dentro do quartil. A solução diz o que distingue os salários mais altos entre quem já ganha bem, não o que leva alguém ao quartil.</li>
+    <li>Os números descrevem associação nas linhas observadas, não efeito causal. Mudar de cargo ou de país não garante o salário mostrado.</li>
+    <li>A amostra é pequena: 313 linhas selecionadas. Diferenças de poucos pontos entre valores de uma coluna estão dentro do ruído.</li>
+    <li>O bloco do cluster 0 existe em 1 linha real. Ele vale pelo efeito de cada coluna (senioridade, cargo e indústria), não como combinação observada.</li>
+    <li>A conferência usa as mesmas linhas que geraram a solução; não há amostra separada de validação.</li>
+    <li>Ficaram fora da solução, por serem consequência e não escolha: <code>bonus_pct</code>, <code>equity_offered_pct</code>, <code>interviews_to_offer</code>, <code>job_satisfaction_score</code>, <code>fears_ai_automation_score</code> e <code>salary_currency</code>.</li>
+  </ul>
+</section>
+<footer>Gerado a partir de <code>salary_solutions.ipynb</code> e dos arquivos em <code>my_datasets/salary_report/</code>.</footer>
+</main>

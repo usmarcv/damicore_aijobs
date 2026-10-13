@@ -1,0 +1,533 @@
+{
+  "edges": [
+    {
+      "length": 0.4391906902037766,
+      "source": "nj_000001",
+      "target": "column_000005"
+    },
+    {
+      "length": 0.4385936005347932,
+      "source": "nj_000001",
+      "target": "column_000006"
+    },
+    {
+      "length": 0.4728556441355762,
+      "source": "nj_000002",
+      "target": "column_000012"
+    },
+    {
+      "length": 0.467295871015939,
+      "source": "nj_000002",
+      "target": "column_000017"
+    },
+    {
+      "length": 0.4687687785069557,
+      "source": "nj_000003",
+      "target": "column_000013"
+    },
+    {
+      "length": 0.47062516088698375,
+      "source": "nj_000003",
+      "target": "column_000025"
+    },
+    {
+      "length": 0.0100273540653832,
+      "source": "nj_000004",
+      "target": "nj_000002"
+    },
+    {
+      "length": 0.005552789475286578,
+      "source": "nj_000004",
+      "target": "nj_000003"
+    },
+    {
+      "length": 0.5043363859145312,
+      "source": "nj_000005",
+      "target": "column_000001"
+    },
+    {
+      "length": 0.490149257743959,
+      "source": "nj_000005",
+      "target": "column_000010"
+    },
+    {
+      "length": 0.4992741622929459,
+      "source": "nj_000006",
+      "target": "column_000007"
+    },
+    {
+      "length": 0.0048095965060637735,
+      "source": "nj_000006",
+      "target": "nj_000005"
+    },
+    {
+      "length": 0.4969464136114261,
+      "source": "nj_000007",
+      "target": "column_000004"
+    },
+    {
+      "length": 0.4997641127043634,
+      "source": "nj_000007",
+      "target": "column_000008"
+    },
+    {
+      "length": 0.49904297907411255,
+      "source": "nj_000008",
+      "target": "column_000002"
+    },
+    {
+      "length": 0.006047992586514783,
+      "source": "nj_000008",
+      "target": "nj_000006"
+    },
+    {
+      "length": 0.4918971425237776,
+      "source": "nj_000009",
+      "target": "column_000011"
+    },
+    {
+      "length": 0.0037871898704469054,
+      "source": "nj_000009",
+      "target": "nj_000008"
+    },
+    {
+      "length": 0.493582923619608,
+      "source": "nj_000010",
+      "target": "column_000014"
+    },
+    {
+      "length": 0.4948920160748439,
+      "source": "nj_000010",
+      "target": "column_000024"
+    },
+    {
+      "length": 0.482214207800183,
+      "source": "nj_000011",
+      "target": "column_000023"
+    },
+    {
+      "length": 0.48098454996379214,
+      "source": "nj_000011",
+      "target": "column_000027"
+    },
+    {
+      "length": 0.019969281953083368,
+      "source": "nj_000012",
+      "target": "nj_000007"
+    },
+    {
+      "length": 0.01625241175215089,
+      "source": "nj_000012",
+      "target": "nj_000009"
+    },
+    {
+      "length": 0.5076181489981748,
+      "source": "nj_000013",
+      "target": "column_000003"
+    },
+    {
+      "length": 0.028296019621972257,
+      "source": "nj_000013",
+      "target": "nj_000004"
+    },
+    {
+      "length": 0.5255814848861247,
+      "source": "nj_000014",
+      "target": "column_000019"
+    },
+    {
+      "length": 0.005431102623017381,
+      "source": "nj_000014",
+      "target": "nj_000012"
+    },
+    {
+      "length": 0.5119774927478689,
+      "source": "nj_000015",
+      "target": "column_000015"
+    },
+    {
+      "length": 0.0902760780649452,
+      "source": "nj_000015",
+      "target": "nj_000001"
+    },
+    {
+      "length": 0.508667303192126,
+      "source": "nj_000016",
+      "target": "column_000020"
+    },
+    {
+      "length": 0.008001889015825991,
+      "source": "nj_000016",
+      "target": "nj_000013"
+    },
+    {
+      "length": 0.009409412034847301,
+      "source": "nj_000017",
+      "target": "nj_000014"
+    },
+    {
+      "length": 0.002960452630708762,
+      "source": "nj_000017",
+      "target": "nj_000016"
+    },
+    {
+      "length": 0.008312941518860209,
+      "source": "nj_000018",
+      "target": "nj_000015"
+    },
+    {
+      "length": 0.006866120667896339,
+      "source": "nj_000018",
+      "target": "nj_000017"
+    },
+    {
+      "length": 0.5101441568238542,
+      "source": "nj_000019",
+      "target": "column_000021"
+    },
+    {
+      "length": 0.005641867914752741,
+      "source": "nj_000019",
+      "target": "nj_000018"
+    },
+    {
+      "length": 0.015973744108641618,
+      "source": "nj_000020",
+      "target": "nj_000010"
+    },
+    {
+      "length": 0.0052931652333718,
+      "source": "nj_000020",
+      "target": "nj_000019"
+    },
+    {
+      "length": 0.4964748481607433,
+      "source": "nj_000021",
+      "target": "column_000016"
+    },
+    {
+      "length": 0.009949194347759649,
+      "source": "nj_000021",
+      "target": "nj_000020"
+    },
+    {
+      "length": 0.01430104941228455,
+      "source": "nj_000022",
+      "target": "nj_000011"
+    },
+    {
+      "length": 0.004891017005536347,
+      "source": "nj_000022",
+      "target": "nj_000021"
+    },
+    {
+      "length": 0.486113380024251,
+      "source": "nj_000023",
+      "target": "column_000022"
+    },
+    {
+      "length": 0.48196773150410055,
+      "source": "nj_000023",
+      "target": "column_000026"
+    },
+    {
+      "length": 0.4868642170526008,
+      "source": "nj_000024",
+      "target": "column_000009"
+    },
+    {
+      "length": 0.48767518929335624,
+      "source": "nj_000024",
+      "target": "column_000018"
+    },
+    {
+      "length": 0.00472274927558386,
+      "source": "nj_000025",
+      "target": "nj_000022"
+    },
+    {
+      "length": 0.0010452013613203581,
+      "source": "nj_000025",
+      "target": "nj_000023"
+    },
+    {
+      "length": 0.0005090387700075472,
+      "source": "nj_root",
+      "target": "nj_000024"
+    },
+    {
+      "length": 0.0005090387700075472,
+      "source": "nj_root",
+      "target": "nj_000025"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "column_000001",
+      "kind": "leaf",
+      "label": "job_title"
+    },
+    {
+      "id": "column_000002",
+      "kind": "leaf",
+      "label": "experience_level"
+    },
+    {
+      "id": "column_000003",
+      "kind": "leaf",
+      "label": "employment_type"
+    },
+    {
+      "id": "column_000004",
+      "kind": "leaf",
+      "label": "company_size"
+    },
+    {
+      "id": "column_000005",
+      "kind": "leaf",
+      "label": "company_location"
+    },
+    {
+      "id": "column_000006",
+      "kind": "leaf",
+      "label": "employee_residence"
+    },
+    {
+      "id": "column_000007",
+      "kind": "leaf",
+      "label": "industry"
+    },
+    {
+      "id": "column_000008",
+      "kind": "leaf",
+      "label": "remote_ratio"
+    },
+    {
+      "id": "column_000009",
+      "kind": "leaf",
+      "label": "years_experience"
+    },
+    {
+      "id": "column_000010",
+      "kind": "leaf",
+      "label": "education_level"
+    },
+    {
+      "id": "column_000011",
+      "kind": "leaf",
+      "label": "primary_language"
+    },
+    {
+      "id": "column_000012",
+      "kind": "leaf",
+      "label": "has_ml_in_title"
+    },
+    {
+      "id": "column_000013",
+      "kind": "leaf",
+      "label": "manages_people"
+    },
+    {
+      "id": "column_000014",
+      "kind": "leaf",
+      "label": "team_size"
+    },
+    {
+      "id": "column_000015",
+      "kind": "leaf",
+      "label": "certifications_count"
+    },
+    {
+      "id": "column_000016",
+      "kind": "leaf",
+      "label": "weekly_hours"
+    },
+    {
+      "id": "column_000017",
+      "kind": "leaf",
+      "label": "uses_ai_tools_daily"
+    },
+    {
+      "id": "column_000018",
+      "kind": "leaf",
+      "label": "ai_tools_hours_per_week"
+    },
+    {
+      "id": "column_000019",
+      "kind": "leaf",
+      "label": "salary_currency"
+    },
+    {
+      "id": "column_000020",
+      "kind": "leaf",
+      "label": "salary_usd"
+    },
+    {
+      "id": "column_000021",
+      "kind": "leaf",
+      "label": "equity_offered_pct"
+    },
+    {
+      "id": "column_000022",
+      "kind": "leaf",
+      "label": "bonus_pct"
+    },
+    {
+      "id": "column_000023",
+      "kind": "leaf",
+      "label": "job_satisfaction_score"
+    },
+    {
+      "id": "column_000024",
+      "kind": "leaf",
+      "label": "interviews_to_offer"
+    },
+    {
+      "id": "column_000025",
+      "kind": "leaf",
+      "label": "switched_jobs_last_year"
+    },
+    {
+      "id": "column_000026",
+      "kind": "leaf",
+      "label": "upskilling_hours_per_month"
+    },
+    {
+      "id": "column_000027",
+      "kind": "leaf",
+      "label": "fears_ai_automation_score"
+    },
+    {
+      "id": "nj_000001",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000002",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000003",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000004",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000005",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000006",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000007",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000008",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000009",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000010",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000011",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000012",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000013",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000014",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000015",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000016",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000017",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000018",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000019",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000020",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000021",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000022",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000023",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000024",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_000025",
+      "kind": "internal",
+      "label": null
+    },
+    {
+      "id": "nj_root",
+      "kind": "internal",
+      "label": null
+    }
+  ],
+  "root_id": "nj_root",
+  "schema_version": 1
+}

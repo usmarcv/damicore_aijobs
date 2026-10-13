@@ -1,0 +1,104 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+# Supersede a pull request's own earlier runs; never discard a run that verified main.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  # Lint and types are interpreter-independent:
+  # pyrightconfig.json pins pythonVersion, so running these once is the whole signal.
+  gate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/uv-workspace
+      - run: make check
+
+  # `make test` runs the whole suite, so the
+  # import-architecture tests are covered on every interpreter rather than once.
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/uv-workspace
+        with:
+          python-version: ${{ matrix.python }}
+      - run: make test
+
+  # Resolves the floor of every declared range -- the workspace packages' runtime ranges and
+  # the dev group's -- so it must not install from the committed lock.
+  #
+  # The mode is set for the whole job instead of on `uv lock` alone because uv records it
+  # in the lockfile and discards a lock resolved under a different one -- "Ignoring existing
+  # lockfile due to change in resolution mode: `lowest-direct` vs. `highest`". A bare
+  # `uv sync` or `uv run` therefore threw the floors away and silently reinstalled the
+  # newest versions, which is how this lane came to assert nothing.
+  #
+  # `lowest` cannot replace `lowest-direct`: it floors undeclared transitive dependencies
+  # too, and resolution then fails building pyparsing 1.4.6, a Python 2 release. Floors
+  # this repository does not declare are not this gate's contract anyway.
+  #
+  # 3.11 is the only interpreter it can use: numpy 1.26 publishes no wheel for 3.13+, so a
+  # newer one would force a source build that fails on a missing BLAS.
+  minimum-versions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      UV_RESOLUTION: lowest-direct
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/uv-workspace
+        with:
+          python-version: "3.11"
+          sync: none
+      - run: uv lock
+      - run: uv sync --all-packages --group dev
+      # A floor nobody can read in the log is a floor nobody notices drifting.
+      - name: Record the resolved floors
+        run: uv pip list
+      - run: uv run pytest -m "not slow"
+
+  # The notebook must execute cell by cell in
+  # a kernel that only knows the built wheels, so a missing dependency or a broken public
+  # symbol fails here rather than for a Colab user.
+  notebook:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      WHEEL_VENV: /tmp/damicore-notebook-venv
+      DAMICORE_NOTEBOOK_KERNEL: damicore-wheels
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/uv-workspace
+      - name: Install damicore from wheels and register its kernel
+        run: |
+          make wheels
+          uv venv "$WHEEL_VENV" --python 3.12
+          uv pip install --python "$WHEEL_VENV/bin/python" --find-links dist damicore ipykernel
+          "$WHEEL_VENV/bin/python" -m ipykernel install --user \
+            --name "$DAMICORE_NOTEBOOK_KERNEL" --display-name "$DAMICORE_NOTEBOOK_KERNEL"
+      - run: uv run pytest tests/notebooks -m notebook

@@ -1,0 +1,39 @@
+{
+  "cluster_count": 7,
+  "community_count": 7,
+  "compression_chunk_bytes": 4194304,
+  "csv_chunk_rows": 50000,
+  "effective_workers": 4,
+  "error": null,
+  "failed_stage": null,
+  "matrix_bytes": 5832,
+  "modularity": 0.7298755504844445,
+  "ncd_max": 1.0995670995670996,
+  "ncd_min": 0.0,
+  "ncd_out_of_range_count": 464,
+  "negative_branch_count": 0,
+  "object_count": 27,
+  "pair_count": 351,
+  "pairs_per_shard": 10000,
+  "peak_rss_bytes": 146313216,
+  "required_free_disk_bytes": 1775994,
+  "status": "completed",
+  "timings_seconds": {
+    "clusterizing": 0.02745963600136747,
+    "distancing": 0.3486913179986004,
+    "normalizing": 0.06484673200066027,
+    "total": 0.4760217509992799,
+    "tree_building": 0.03502406499865174
+  },
+  "verification": {
+    "cluster_ids": true,
+    "clusters": true,
+    "matrix_shape": true,
+    "membership": true,
+    "membership_clusters": true,
+    "normalization_to_labels": true,
+    "requested_communities": true,
+    "tree_leaves": true
+  },
+  "warnings": []
+}

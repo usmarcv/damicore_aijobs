@@ -1,0 +1,211 @@
+job_title,experience_level,industry,education_level,primary_language
+Data Engineer,Senior,Government,Masters,Java
+MLOps Engineer,Senior,Technology,PhD,Python
+Data Engineer,Entry,Finance,Bachelors,Python
+Research Scientist,Senior,Consulting,Masters,Python
+Data Analyst,Senior,Media,Bachelors,Java
+Data Engineer,Mid,Retail,Bachelors,R
+Data Analyst,Lead,Government,Masters,Python
+Data Scientist,Entry,Technology,Bootcamp,Python
+Data Engineer,Entry,Consulting,Masters,Python
+Computer Vision Engineer,Executive,Retail,Masters,Python
+Data Engineer,Entry,Finance,Bachelors,Python
+Data Scientist,Mid,Retail,Masters,Python
+Machine Learning Engineer,Entry,Healthcare,Masters,R
+Business Intelligence Analyst,Mid,Technology,Bachelors,SQL
+Data Scientist,Entry,Technology,Masters,Python
+Research Scientist,Mid,Consulting,Bachelors,Python
+Data Engineer,Entry,Manufacturing,Masters,Python
+Research Scientist,Senior,Technology,Masters,SQL
+Data Scientist,Mid,Technology,Masters,Scala
+Data Scientist,Lead,Energy,Bachelors,SQL
+Data Scientist,Lead,Healthcare,Self-taught,Python
+LLM Engineer,Executive,Healthcare,Bachelors,Python
+Data Analyst,Mid,Retail,Masters,Python
+Business Intelligence Analyst,Lead,Finance,Masters,Python
+LLM Engineer,Entry,Education,Masters,Python
+Analytics Engineer,Entry,Technology,Masters,SQL
+Data Science Manager,Mid,Healthcare,Masters,SQL
+Data Scientist,Executive,Media,Masters,Python
+Data Science Manager,Mid,Technology,Masters,Python
+Data Engineer,Lead,Technology,Masters,Python
+Data Analyst,Lead,Retail,Bachelors,Java
+Data Engineer,Senior,Energy,Bachelors,Python
+Data Science Manager,Senior,Technology,Masters,Python
+Data Analyst,Mid,Retail,PhD,SQL
+Business Intelligence Analyst,Entry,Education,Bootcamp,Python
+MLOps Engineer,Senior,Government,Masters,Python
+Research Scientist,Lead,Finance,Bootcamp,SQL
+Data Scientist,Mid,Consulting,Bachelors,Julia
+Data Scientist,Entry,Technology,Bachelors,Julia
+Machine Learning Engineer,Senior,Healthcare,Masters,Python
+Data Engineer,Lead,Technology,Masters,Python
+Machine Learning Engineer,Entry,Consulting,Bootcamp,SQL
+Data Analyst,Entry,Finance,Masters,Rust
+Machine Learning Engineer,Lead,Finance,Masters,SQL
+LLM Engineer,Mid,Manufacturing,Masters,SQL
+MLOps Engineer,Senior,Technology,Bachelors,Python
+Data Scientist,Lead,Retail,Bachelors,Python
+Machine Learning Engineer,Mid,Technology,PhD,Scala
+AI Engineer,Mid,Finance,Bachelors,Python
+Data Engineer,Lead,Consulting,Masters,R
+Machine Learning Engineer,Mid,Healthcare,PhD,Python
+Analytics Engineer,Entry,Government,Masters,Python
+Machine Learning Engineer,Entry,Technology,Bootcamp,Scala
+Research Scientist,Senior,Retail,Bachelors,Python
+Machine Learning Engineer,Mid,Technology,PhD,Python
+Analytics Engineer,Entry,Retail,Masters,Python
+Data Analyst,Senior,Retail,Masters,SQL
+Data Scientist,Senior,Consulting,Self-taught,Python
+Research Scientist,Lead,Manufacturing,Bootcamp,Python
+Data Scientist,Senior,Consulting,Bachelors,SQL
+Business Intelligence Analyst,Entry,Finance,Masters,R
+AI Engineer,Entry,Retail,Masters,Python
+Data Analyst,Senior,Finance,Bachelors,SQL
+Data Scientist,Senior,Technology,Masters,Python
+Data Engineer,Mid,Finance,Bachelors,Python
+Data Analyst,Entry,Retail,PhD,SQL
+AI Engineer,Mid,Retail,Bootcamp,SQL
+Analytics Engineer,Lead,Media,Bachelors,Python
+Data Analyst,Entry,Finance,Masters,Julia
+Data Engineer,Mid,Technology,Masters,SQL
+Data Engineer,Lead,Finance,PhD,SQL
+MLOps Engineer,Senior,Media,Masters,Julia
+Data Scientist,Mid,Media,Bachelors,Python
+Data Scientist,Executive,Technology,Masters,Python
+Machine Learning Engineer,Mid,Finance,Masters,Java
+Data Scientist,Mid,Technology,Bachelors,Python
+Data Analyst,Lead,Manufacturing,Bachelors,Python
+Machine Learning Engineer,Entry,Retail,Bootcamp,Python
+AI Engineer,Mid,Technology,Masters,Python
+LLM Engineer,Entry,Technology,Bachelors,SQL
+Data Scientist,Mid,Healthcare,Bachelors,Python
+Data Engineer,Mid,Technology,Bachelors,SQL
+Machine Learning Engineer,Lead,Consulting,Bachelors,Python
+Business Intelligence Analyst,Senior,Technology,Bachelors,SQL
+Analytics Engineer,Lead,Finance,Bachelors,SQL
+Machine Learning Engineer,Entry,Retail,Bachelors,SQL
+MLOps Engineer,Entry,Media,Masters,Python
+Analytics Engineer,Entry,Finance,PhD,SQL
+AI Engineer,Senior,Manufacturing,Bachelors,Python
+Data Scientist,Entry,Technology,Bachelors,SQL
+Data Engineer,Entry,Retail,Masters,Python
+Data Analyst,Mid,Technology,Bachelors,R
+Research Scientist,Senior,Retail,Bachelors,SQL
+Business Intelligence Analyst,Entry,Finance,Masters,Python
+Data Analyst,Mid,Media,Bachelors,Scala
+Machine Learning Engineer,Mid,Consulting,Bootcamp,Python
+Data Engineer,Executive,Finance,Bachelors,Scala
+AI Engineer,Entry,Finance,Bachelors,Python
+Machine Learning Engineer,Entry,Healthcare,Bachelors,Scala
+MLOps Engineer,Senior,Consulting,Bachelors,Python
+Data Scientist,Mid,Consulting,Bachelors,Python
+AI Engineer,Executive,Technology,Self-taught,Python
+Analytics Engineer,Senior,Finance,Masters,SQL
+Data Scientist,Lead,Retail,Bachelors,Python
+Data Engineer,Lead,Technology,Bootcamp,Python
+Data Analyst,Mid,Energy,Masters,Python
+Machine Learning Engineer,Senior,Energy,Self-taught,Python
+Data Engineer,Senior,Government,Bachelors,SQL
+MLOps Engineer,Entry,Retail,Bootcamp,Python
+Data Scientist,Executive,Technology,Bachelors,Python
+Data Scientist,Senior,Retail,Masters,Python
+Machine Learning Engineer,Senior,Government,Bachelors,Python
+Machine Learning Engineer,Entry,Media,Bootcamp,Python
+Data Engineer,Entry,Government,Bootcamp,Python
+Machine Learning Engineer,Lead,Education,Masters,Python
+Data Engineer,Mid,Education,Masters,Python
+LLM Engineer,Senior,Media,PhD,Python
+Computer Vision Engineer,Mid,Technology,Bachelors,Scala
+Computer Vision Engineer,Entry,Finance,Masters,Python
+Machine Learning Engineer,Entry,Consulting,Masters,Python
+Data Analyst,Senior,Technology,Bootcamp,SQL
+Machine Learning Engineer,Lead,Technology,Masters,Python
+Computer Vision Engineer,Senior,Technology,Bachelors,SQL
+Computer Vision Engineer,Entry,Retail,Bachelors,Python
+Data Analyst,Senior,Finance,Masters,Python
+LLM Engineer,Entry,Technology,Masters,SQL
+Data Scientist,Mid,Healthcare,Bachelors,R
+Data Scientist,Senior,Consulting,Bachelors,Python
+Data Scientist,Mid,Technology,Bootcamp,Java
+Data Engineer,Senior,Technology,Bachelors,Python
+Research Scientist,Mid,Technology,Masters,Java
+Business Intelligence Analyst,Senior,Finance,Masters,Java
+Data Engineer,Mid,Education,Masters,Scala
+Data Engineer,Mid,Technology,Bachelors,SQL
+Research Scientist,Senior,Finance,Bachelors,Python
+AI Engineer,Mid,Government,Bachelors,Python
+MLOps Engineer,Senior,Healthcare,Bachelors,SQL
+Machine Learning Engineer,Mid,Energy,Bachelors,R
+Machine Learning Engineer,Mid,Retail,Masters,Python
+AI Engineer,Mid,Technology,Masters,SQL
+Analytics Engineer,Entry,Education,Bachelors,SQL
+Analytics Engineer,Lead,Retail,Masters,Python
+Data Scientist,Entry,Technology,Bachelors,Python
+Data Engineer,Entry,Healthcare,Bachelors,R
+Data Engineer,Senior,Healthcare,Masters,Python
+Data Science Manager,Senior,Healthcare,Bachelors,Python
+Data Scientist,Senior,Technology,Bachelors,SQL
+Data Scientist,Senior,Consulting,PhD,Python
+LLM Engineer,Entry,Government,Bootcamp,Python
+Data Scientist,Executive,Government,PhD,SQL
+Machine Learning Engineer,Entry,Technology,Masters,SQL
+Analytics Engineer,Entry,Energy,Masters,SQL
+MLOps Engineer,Executive,Finance,Self-taught,Python
+Research Scientist,Entry,Consulting,Bachelors,SQL
+MLOps Engineer,Mid,Manufacturing,Masters,Python
+AI Engineer,Entry,Finance,Bootcamp,Python
+AI Engineer,Mid,Education,Masters,SQL
+Analytics Engineer,Entry,Healthcare,PhD,Scala
+Machine Learning Engineer,Mid,Media,Masters,Python
+Business Intelligence Analyst,Entry,Finance,Masters,SQL
+Analytics Engineer,Senior,Finance,Bachelors,Python
+Data Engineer,Lead,Technology,Masters,SQL
+AI Engineer,Senior,Energy,Masters,Python
+Business Intelligence Analyst,Lead,Manufacturing,Masters,SQL
+Data Engineer,Senior,Retail,Masters,Java
+Machine Learning Engineer,Mid,Technology,Bachelors,Python
+Business Intelligence Analyst,Senior,Technology,PhD,Java
+Machine Learning Engineer,Entry,Manufacturing,Bootcamp,Python
+Business Intelligence Analyst,Mid,Media,Self-taught,Python
+AI Engineer,Executive,Finance,Masters,Python
+Data Engineer,Mid,Technology,Masters,Scala
+Research Scientist,Mid,Education,Bachelors,SQL
+Data Engineer,Senior,Technology,Bachelors,Java
+Data Engineer,Entry,Technology,Bachelors,Python
+Analytics Engineer,Mid,Government,PhD,Julia
+Data Analyst,Senior,Finance,Bachelors,SQL
+AI Engineer,Senior,Media,Bachelors,Python
+LLM Engineer,Senior,Technology,Masters,Python
+Data Analyst,Entry,Technology,Masters,SQL
+Machine Learning Engineer,Senior,Retail,Bootcamp,SQL
+Data Engineer,Senior,Technology,Bachelors,Python
+AI Engineer,Mid,Technology,Bachelors,Python
+MLOps Engineer,Senior,Finance,Masters,Python
+Data Scientist,Entry,Technology,Bachelors,SQL
+Machine Learning Engineer,Senior,Healthcare,Bachelors,Python
+Research Scientist,Senior,Healthcare,Masters,Julia
+Business Intelligence Analyst,Mid,Retail,Masters,Python
+LLM Engineer,Entry,Technology,Bachelors,Python
+Data Scientist,Entry,Technology,Bachelors,Python
+Data Scientist,Mid,Finance,PhD,Python
+Machine Learning Engineer,Mid,Education,Bachelors,Python
+Machine Learning Engineer,Mid,Finance,Self-taught,Python
+Business Intelligence Analyst,Senior,Consulting,Self-taught,Python
+Business Intelligence Analyst,Senior,Healthcare,PhD,Python
+MLOps Engineer,Entry,Healthcare,Masters,R
+Machine Learning Engineer,Mid,Technology,Masters,Python
+Research Scientist,Lead,Manufacturing,Bachelors,Python
+Research Scientist,Senior,Healthcare,Masters,SQL
+Research Scientist,Senior,Media,Bachelors,Java
+Research Scientist,Mid,Education,Bachelors,Python
+Analytics Engineer,Entry,Technology,Bachelors,R
+Data Scientist,Mid,Energy,Bachelors,Python
+Computer Vision Engineer,Lead,Energy,Masters,SQL
+Data Scientist,Entry,Healthcare,Bachelors,Python
+Data Science Manager,Entry,Manufacturing,Bootcamp,Python
+Data Engineer,Lead,Healthcare,Masters,SQL
+Data Scientist,Senior,Media,Bachelors,Java
+Data Scientist,Mid,Government,PhD,Python
+Computer Vision Engineer,Senior,Finance,PhD,Python
+AI Engineer,Entry,Retail,Bachelors,Python

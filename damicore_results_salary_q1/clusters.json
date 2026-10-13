@@ -1,0 +1,108 @@
+{
+  "clusters": [
+    {
+      "cluster": 0,
+      "labels": [
+        "job_title",
+        "experience_level",
+        "industry",
+        "education_level",
+        "primary_language"
+      ],
+      "object_ids": [
+        "column_000001",
+        "column_000002",
+        "column_000007",
+        "column_000010",
+        "column_000011"
+      ]
+    },
+    {
+      "cluster": 1,
+      "labels": [
+        "employment_type",
+        "salary_usd"
+      ],
+      "object_ids": [
+        "column_000003",
+        "column_000020"
+      ]
+    },
+    {
+      "cluster": 2,
+      "labels": [
+        "company_size",
+        "company_location",
+        "employee_residence",
+        "remote_ratio",
+        "salary_currency"
+      ],
+      "object_ids": [
+        "column_000004",
+        "column_000005",
+        "column_000006",
+        "column_000008",
+        "column_000019"
+      ]
+    },
+    {
+      "cluster": 3,
+      "labels": [
+        "years_experience",
+        "ai_tools_hours_per_week",
+        "bonus_pct",
+        "upskilling_hours_per_month"
+      ],
+      "object_ids": [
+        "column_000009",
+        "column_000018",
+        "column_000022",
+        "column_000026"
+      ]
+    },
+    {
+      "cluster": 4,
+      "labels": [
+        "has_ml_in_title",
+        "manages_people",
+        "uses_ai_tools_daily",
+        "switched_jobs_last_year"
+      ],
+      "object_ids": [
+        "column_000012",
+        "column_000013",
+        "column_000017",
+        "column_000025"
+      ]
+    },
+    {
+      "cluster": 5,
+      "labels": [
+        "team_size",
+        "certifications_count",
+        "equity_offered_pct",
+        "interviews_to_offer"
+      ],
+      "object_ids": [
+        "column_000014",
+        "column_000015",
+        "column_000021",
+        "column_000024"
+      ]
+    },
+    {
+      "cluster": 6,
+      "labels": [
+        "weekly_hours",
+        "job_satisfaction_score",
+        "fears_ai_automation_score"
+      ],
+      "object_ids": [
+        "column_000016",
+        "column_000023",
+        "column_000027"
+      ]
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,58 @@
+{
+  "completed": [
+    0
+  ],
+  "digests": {
+    "0": "a9360b93f341dafb532257d98a478ad7bbe6107e1bee8b53f2d7a6a70a7ce2bc"
+  },
+  "identity": {
+    "config": {
+      "compression_chunk_bytes": 4194304,
+      "compression_level": 6,
+      "compressor": "zlib",
+      "pairs_per_shard": 10000,
+      "resume": true,
+      "save_diagnostics": false,
+      "workers": 4
+    },
+    "normalization_manifest_sha256": "754cb3717e52272f5375a7c61ed531436f264affaa95cb57c3215beee1d3605a",
+    "object_ids": [
+      "column_000001",
+      "column_000002",
+      "column_000003",
+      "column_000004",
+      "column_000005",
+      "column_000006",
+      "column_000007",
+      "column_000008",
+      "column_000009",
+      "column_000010",
+      "column_000011",
+      "column_000012",
+      "column_000013",
+      "column_000014",
+      "column_000015",
+      "column_000016",
+      "column_000017",
+      "column_000018",
+      "column_000019",
+      "column_000020",
+      "column_000021",
+      "column_000022",
+      "column_000023",
+      "column_000024",
+      "column_000025",
+      "column_000026",
+      "column_000027"
+    ],
+    "runtime": {
+      "numpy": "2.1.3",
+      "python": "3.12.13",
+      "zlib_build": "1.3.2",
+      "zlib_runtime": "1.3.2"
+    },
+    "schema_version": 1
+  },
+  "pair_count": 351,
+  "shard_count": 1
+}

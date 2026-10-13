@@ -1,0 +1,70 @@
+[project]
+name = "damicore-tree-builder"
+version = "0.2.0"
+description = "Neighbor-Joining tree builder for the DAMICORE pipeline."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "Ennio Politi Lopes", email = "enniolopes@users.noreply.github.com" }]
+requires-python = ">=3.11,<3.15"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Typing :: Typed",
+]
+keywords = ["damicore", "neighbor-joining", "phylogenetics", "tree", "newick"]
+dependencies = ["numpy>=1.26,<3", "pydantic>=2.10,<3"]
+
+[project.urls]
+Homepage = "https://github.com/Delbem-Research-and-Innovation/damicore"
+Repository = "https://github.com/Delbem-Research-and-Innovation/damicore"
+Issues = "https://github.com/Delbem-Research-and-Innovation/damicore/issues"
+Documentation = "https://github.com/Delbem-Research-and-Innovation/damicore/blob/main/docs/quickstart.md"
+Changelog = "https://github.com/Delbem-Research-and-Innovation/damicore/blob/main/CHANGELOG.md"
+
+[build-system]
+requires = ["hatchling>=1.31.0,<2"]
+build-backend = "hatchling.build"
+
+# Workspace-only files are excluded on purpose: each package's Makefile only includes
+# ../package.mk, pyrightconfig.json extends ../../pyrightconfig.json, and tests/ depends
+# on the workspace conftest and dev tooling, so none of them work in an sdist unpacked
+# outside the monorepo. The repository .gitignore still ships: hatchling force-includes
+# the located VCS ignore file so an sdist-to-wheel build selects files the same way, and
+# `exclude` deliberately cannot override that.
+[tool.hatch.build.targets.sdist]
+exclude = ["Makefile", "pyrightconfig.json", "tests"]
+
+[tool.ruff]
+line-length = 100
+exclude = [".venv", "dist", "__pycache__"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "RUF100", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+# The whole workspace marker registry. Pytest inherits no ini options from a parent, so the
+# list has to exist in every rootdir a suite is run from; why that matters, and what a missing
+# entry actually costs, is in test_every_test_module_declares_a_registered_marker, which also
+# holds these copies equal to the root.
+markers = [
+    "unit: fast isolated unit tests",
+    "contract: cross-package contract tests",
+    "e2e: complete pipeline tests",
+    "notebook: executable notebook tests",
+    "slow: stress and benchmark-adjacent tests",
+]
+# --cov-branch and the floor mirror the root configuration on purpose: coverage resolves
+# its config from the working directory, so a package-scoped run would otherwise report
+# line coverage with no threshold and read as a stronger result than it is.
+addopts = "--strict-markers --cov=damicore_tree_builder --cov-branch --cov-report=term-missing --cov-fail-under=90"

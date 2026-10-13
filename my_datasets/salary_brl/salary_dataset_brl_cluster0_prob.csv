@@ -1,0 +1,203 @@
+job_title,experience_level,industry,education_level,primary_language,prob_set
+Data Engineer,Entry,Finance,Bachelors,Python,0.009523809523809525
+Data Analyst,Senior,Finance,Bachelors,SQL,0.009523809523809525
+Data Engineer,Senior,Technology,Bachelors,Python,0.009523809523809525
+Data Scientist,Entry,Technology,Bachelors,SQL,0.009523809523809525
+Data Scientist,Lead,Retail,Bachelors,Python,0.009523809523809525
+Data Scientist,Entry,Technology,Bachelors,Python,0.009523809523809525
+Data Engineer,Mid,Technology,Bachelors,SQL,0.009523809523809525
+Data Engineer,Lead,Technology,Masters,Python,0.009523809523809525
+AI Engineer,Entry,Retail,Bachelors,Python,0.004761904761904762
+AI Engineer,Entry,Retail,Masters,Python,0.004761904761904762
+AI Engineer,Mid,Retail,Bootcamp,SQL,0.004761904761904762
+AI Engineer,Mid,Government,Bachelors,Python,0.004761904761904762
+AI Engineer,Mid,Technology,Bachelors,Python,0.004761904761904762
+AI Engineer,Mid,Technology,Masters,Python,0.004761904761904762
+AI Engineer,Senior,Manufacturing,Bachelors,Python,0.004761904761904762
+AI Engineer,Senior,Media,Bachelors,Python,0.004761904761904762
+AI Engineer,Mid,Technology,Masters,SQL,0.004761904761904762
+AI Engineer,Senior,Energy,Masters,Python,0.004761904761904762
+Analytics Engineer,Entry,Finance,PhD,SQL,0.004761904761904762
+Analytics Engineer,Entry,Government,Masters,Python,0.004761904761904762
+Analytics Engineer,Entry,Healthcare,PhD,Scala,0.004761904761904762
+Analytics Engineer,Entry,Retail,Masters,Python,0.004761904761904762
+Analytics Engineer,Entry,Technology,Bachelors,R,0.004761904761904762
+Analytics Engineer,Entry,Technology,Masters,SQL,0.004761904761904762
+Analytics Engineer,Entry,Education,Bachelors,SQL,0.004761904761904762
+Analytics Engineer,Entry,Energy,Masters,SQL,0.004761904761904762
+Analytics Engineer,Lead,Retail,Masters,Python,0.004761904761904762
+Analytics Engineer,Mid,Government,PhD,Julia,0.004761904761904762
+Analytics Engineer,Senior,Finance,Bachelors,Python,0.004761904761904762
+Analytics Engineer,Senior,Finance,Masters,SQL,0.004761904761904762
+Business Intelligence Analyst,Entry,Education,Bootcamp,Python,0.004761904761904762
+Business Intelligence Analyst,Entry,Finance,Masters,Python,0.004761904761904762
+Business Intelligence Analyst,Entry,Finance,Masters,R,0.004761904761904762
+Business Intelligence Analyst,Entry,Finance,Masters,SQL,0.004761904761904762
+Business Intelligence Analyst,Lead,Finance,Masters,Python,0.004761904761904762
+Business Intelligence Analyst,Lead,Manufacturing,Masters,SQL,0.004761904761904762
+Business Intelligence Analyst,Mid,Media,Self-taught,Python,0.004761904761904762
+Business Intelligence Analyst,Mid,Retail,Masters,Python,0.004761904761904762
+Business Intelligence Analyst,Mid,Technology,Bachelors,SQL,0.004761904761904762
+Business Intelligence Analyst,Senior,Consulting,Self-taught,Python,0.004761904761904762
+Analytics Engineer,Lead,Finance,Bachelors,SQL,0.004761904761904762
+Analytics Engineer,Lead,Media,Bachelors,Python,0.004761904761904762
+Business Intelligence Analyst,Senior,Healthcare,PhD,Python,0.004761904761904762
+Business Intelligence Analyst,Senior,Finance,Masters,Java,0.004761904761904762
+Business Intelligence Analyst,Senior,Technology,Bachelors,SQL,0.004761904761904762
+Business Intelligence Analyst,Senior,Technology,PhD,Java,0.004761904761904762
+Computer Vision Engineer,Executive,Retail,Masters,Python,0.004761904761904762
+Computer Vision Engineer,Lead,Energy,Masters,SQL,0.004761904761904762
+Computer Vision Engineer,Entry,Finance,Masters,Python,0.004761904761904762
+Computer Vision Engineer,Entry,Retail,Bachelors,Python,0.004761904761904762
+Computer Vision Engineer,Senior,Technology,Bachelors,SQL,0.004761904761904762
+Data Analyst,Entry,Finance,Masters,Julia,0.004761904761904762
+Data Analyst,Entry,Finance,Masters,Rust,0.004761904761904762
+Data Analyst,Entry,Retail,PhD,SQL,0.004761904761904762
+Data Analyst,Entry,Technology,Masters,SQL,0.004761904761904762
+Data Analyst,Lead,Government,Masters,Python,0.004761904761904762
+Computer Vision Engineer,Mid,Technology,Bachelors,Scala,0.004761904761904762
+Computer Vision Engineer,Senior,Finance,PhD,Python,0.004761904761904762
+Data Analyst,Lead,Retail,Bachelors,Java,0.004761904761904762
+Data Analyst,Lead,Manufacturing,Bachelors,Python,0.004761904761904762
+Data Analyst,Mid,Retail,Masters,Python,0.004761904761904762
+Data Analyst,Mid,Energy,Masters,Python,0.004761904761904762
+Data Analyst,Mid,Retail,PhD,SQL,0.004761904761904762
+Data Analyst,Mid,Technology,Bachelors,R,0.004761904761904762
+Data Analyst,Senior,Finance,Masters,Python,0.004761904761904762
+Data Analyst,Mid,Media,Bachelors,Scala,0.004761904761904762
+Data Analyst,Senior,Media,Bachelors,Java,0.004761904761904762
+Data Analyst,Senior,Retail,Masters,SQL,0.004761904761904762
+AI Engineer,Executive,Finance,Masters,Python,0.004761904761904762
+AI Engineer,Executive,Technology,Self-taught,Python,0.004761904761904762
+AI Engineer,Mid,Education,Masters,SQL,0.004761904761904762
+AI Engineer,Mid,Finance,Bachelors,Python,0.004761904761904762
+AI Engineer,Entry,Finance,Bachelors,Python,0.004761904761904762
+AI Engineer,Entry,Finance,Bootcamp,Python,0.004761904761904762
+Data Engineer,Entry,Retail,Masters,Python,0.004761904761904762
+Data Engineer,Entry,Manufacturing,Masters,Python,0.004761904761904762
+Data Engineer,Entry,Healthcare,Bachelors,R,0.004761904761904762
+Data Engineer,Entry,Government,Bootcamp,Python,0.004761904761904762
+Data Engineer,Entry,Consulting,Masters,Python,0.004761904761904762
+Data Analyst,Senior,Technology,Bootcamp,SQL,0.004761904761904762
+Data Engineer,Lead,Consulting,Masters,R,0.004761904761904762
+Data Engineer,Lead,Finance,PhD,SQL,0.004761904761904762
+Data Engineer,Lead,Technology,Masters,SQL,0.004761904761904762
+Data Engineer,Mid,Education,Masters,Python,0.004761904761904762
+Data Engineer,Mid,Finance,Bachelors,Python,0.004761904761904762
+Data Engineer,Mid,Education,Masters,Scala,0.004761904761904762
+Data Engineer,Mid,Retail,Bachelors,R,0.004761904761904762
+Data Engineer,Lead,Healthcare,Masters,SQL,0.004761904761904762
+Data Engineer,Lead,Technology,Bootcamp,Python,0.004761904761904762
+Data Engineer,Entry,Technology,Bachelors,Python,0.004761904761904762
+Data Engineer,Senior,Energy,Bachelors,Python,0.004761904761904762
+Data Engineer,Mid,Technology,Masters,Scala,0.004761904761904762
+Data Engineer,Mid,Technology,Masters,SQL,0.004761904761904762
+Data Engineer,Senior,Government,Bachelors,SQL,0.004761904761904762
+Data Engineer,Senior,Retail,Masters,Java,0.004761904761904762
+Data Engineer,Senior,Technology,Bachelors,Java,0.004761904761904762
+Data Engineer,Senior,Healthcare,Masters,Python,0.004761904761904762
+Data Engineer,Senior,Government,Masters,Java,0.004761904761904762
+Data Science Manager,Mid,Healthcare,Masters,SQL,0.004761904761904762
+Data Science Manager,Entry,Manufacturing,Bootcamp,Python,0.004761904761904762
+Data Science Manager,Mid,Technology,Masters,Python,0.004761904761904762
+Data Science Manager,Senior,Healthcare,Bachelors,Python,0.004761904761904762
+Data Scientist,Entry,Healthcare,Bachelors,Python,0.004761904761904762
+Data Science Manager,Senior,Technology,Masters,Python,0.004761904761904762
+Data Scientist,Entry,Technology,Bachelors,Julia,0.004761904761904762
+Data Engineer,Executive,Finance,Bachelors,Scala,0.004761904761904762
+Data Scientist,Entry,Technology,Bootcamp,Python,0.004761904761904762
+Data Scientist,Entry,Technology,Masters,Python,0.004761904761904762
+Data Scientist,Executive,Media,Masters,Python,0.004761904761904762
+Data Scientist,Executive,Government,PhD,SQL,0.004761904761904762
+Data Scientist,Executive,Technology,Bachelors,Python,0.004761904761904762
+Data Scientist,Executive,Technology,Masters,Python,0.004761904761904762
+Data Scientist,Lead,Energy,Bachelors,SQL,0.004761904761904762
+Data Scientist,Lead,Healthcare,Self-taught,Python,0.004761904761904762
+Data Scientist,Mid,Consulting,Bachelors,Julia,0.004761904761904762
+Data Scientist,Mid,Consulting,Bachelors,Python,0.004761904761904762
+Data Scientist,Mid,Energy,Bachelors,Python,0.004761904761904762
+Data Scientist,Mid,Finance,PhD,Python,0.004761904761904762
+Data Scientist,Mid,Government,PhD,Python,0.004761904761904762
+Data Scientist,Mid,Healthcare,Bachelors,Python,0.004761904761904762
+Data Scientist,Mid,Healthcare,Bachelors,R,0.004761904761904762
+Data Scientist,Mid,Media,Bachelors,Python,0.004761904761904762
+Data Scientist,Mid,Retail,Masters,Python,0.004761904761904762
+Data Scientist,Mid,Technology,Bachelors,Python,0.004761904761904762
+Data Scientist,Mid,Technology,Bootcamp,Java,0.004761904761904762
+Data Scientist,Mid,Technology,Masters,Scala,0.004761904761904762
+Data Scientist,Senior,Consulting,Bachelors,Python,0.004761904761904762
+Data Scientist,Senior,Consulting,Bachelors,SQL,0.004761904761904762
+Data Scientist,Senior,Consulting,PhD,Python,0.004761904761904762
+Data Scientist,Senior,Consulting,Self-taught,Python,0.004761904761904762
+Data Scientist,Senior,Media,Bachelors,Java,0.004761904761904762
+Data Scientist,Senior,Retail,Masters,Python,0.004761904761904762
+Data Scientist,Senior,Technology,Bachelors,SQL,0.004761904761904762
+Data Scientist,Senior,Technology,Masters,Python,0.004761904761904762
+LLM Engineer,Entry,Education,Masters,Python,0.004761904761904762
+LLM Engineer,Entry,Government,Bootcamp,Python,0.004761904761904762
+LLM Engineer,Entry,Technology,Bachelors,Python,0.004761904761904762
+LLM Engineer,Entry,Technology,Bachelors,SQL,0.004761904761904762
+LLM Engineer,Entry,Technology,Masters,SQL,0.004761904761904762
+LLM Engineer,Executive,Healthcare,Bachelors,Python,0.004761904761904762
+LLM Engineer,Mid,Manufacturing,Masters,SQL,0.004761904761904762
+LLM Engineer,Senior,Media,PhD,Python,0.004761904761904762
+LLM Engineer,Senior,Technology,Masters,Python,0.004761904761904762
+MLOps Engineer,Entry,Healthcare,Masters,R,0.004761904761904762
+MLOps Engineer,Entry,Media,Masters,Python,0.004761904761904762
+MLOps Engineer,Entry,Retail,Bootcamp,Python,0.004761904761904762
+MLOps Engineer,Executive,Finance,Self-taught,Python,0.004761904761904762
+MLOps Engineer,Mid,Manufacturing,Masters,Python,0.004761904761904762
+MLOps Engineer,Senior,Consulting,Bachelors,Python,0.004761904761904762
+MLOps Engineer,Senior,Finance,Masters,Python,0.004761904761904762
+MLOps Engineer,Senior,Government,Masters,Python,0.004761904761904762
+MLOps Engineer,Senior,Healthcare,Bachelors,SQL,0.004761904761904762
+MLOps Engineer,Senior,Media,Masters,Julia,0.004761904761904762
+MLOps Engineer,Senior,Technology,Bachelors,Python,0.004761904761904762
+MLOps Engineer,Senior,Technology,PhD,Python,0.004761904761904762
+Machine Learning Engineer,Entry,Consulting,Bootcamp,SQL,0.004761904761904762
+Machine Learning Engineer,Entry,Consulting,Masters,Python,0.004761904761904762
+Machine Learning Engineer,Entry,Healthcare,Bachelors,Scala,0.004761904761904762
+Machine Learning Engineer,Entry,Healthcare,Masters,R,0.004761904761904762
+Machine Learning Engineer,Entry,Manufacturing,Bootcamp,Python,0.004761904761904762
+Machine Learning Engineer,Entry,Media,Bootcamp,Python,0.004761904761904762
+Machine Learning Engineer,Entry,Retail,Bachelors,SQL,0.004761904761904762
+Machine Learning Engineer,Entry,Retail,Bootcamp,Python,0.004761904761904762
+Machine Learning Engineer,Entry,Technology,Bootcamp,Scala,0.004761904761904762
+Machine Learning Engineer,Entry,Technology,Masters,SQL,0.004761904761904762
+Machine Learning Engineer,Lead,Consulting,Bachelors,Python,0.004761904761904762
+Machine Learning Engineer,Lead,Education,Masters,Python,0.004761904761904762
+Machine Learning Engineer,Lead,Finance,Masters,SQL,0.004761904761904762
+Machine Learning Engineer,Lead,Technology,Masters,Python,0.004761904761904762
+Machine Learning Engineer,Mid,Consulting,Bootcamp,Python,0.004761904761904762
+Machine Learning Engineer,Mid,Education,Bachelors,Python,0.004761904761904762
+Machine Learning Engineer,Mid,Energy,Bachelors,R,0.004761904761904762
+Machine Learning Engineer,Mid,Finance,Masters,Java,0.004761904761904762
+Machine Learning Engineer,Mid,Finance,Self-taught,Python,0.004761904761904762
+Machine Learning Engineer,Mid,Healthcare,PhD,Python,0.004761904761904762
+Machine Learning Engineer,Mid,Media,Masters,Python,0.004761904761904762
+Machine Learning Engineer,Mid,Retail,Masters,Python,0.004761904761904762
+Machine Learning Engineer,Mid,Technology,Bachelors,Python,0.004761904761904762
+Machine Learning Engineer,Mid,Technology,Masters,Python,0.004761904761904762
+Machine Learning Engineer,Mid,Technology,PhD,Python,0.004761904761904762
+Machine Learning Engineer,Mid,Technology,PhD,Scala,0.004761904761904762
+Machine Learning Engineer,Senior,Energy,Self-taught,Python,0.004761904761904762
+Machine Learning Engineer,Senior,Government,Bachelors,Python,0.004761904761904762
+Machine Learning Engineer,Senior,Healthcare,Bachelors,Python,0.004761904761904762
+Machine Learning Engineer,Senior,Healthcare,Masters,Python,0.004761904761904762
+Machine Learning Engineer,Senior,Retail,Bootcamp,SQL,0.004761904761904762
+Research Scientist,Entry,Consulting,Bachelors,SQL,0.004761904761904762
+Research Scientist,Lead,Finance,Bootcamp,SQL,0.004761904761904762
+Research Scientist,Lead,Manufacturing,Bachelors,Python,0.004761904761904762
+Research Scientist,Lead,Manufacturing,Bootcamp,Python,0.004761904761904762
+Research Scientist,Mid,Consulting,Bachelors,Python,0.004761904761904762
+Research Scientist,Mid,Education,Bachelors,Python,0.004761904761904762
+Research Scientist,Mid,Education,Bachelors,SQL,0.004761904761904762
+Research Scientist,Mid,Technology,Masters,Java,0.004761904761904762
+Research Scientist,Senior,Consulting,Masters,Python,0.004761904761904762
+Research Scientist,Senior,Finance,Bachelors,Python,0.004761904761904762
+Research Scientist,Senior,Healthcare,Masters,Julia,0.004761904761904762
+Research Scientist,Senior,Healthcare,Masters,SQL,0.004761904761904762
+Research Scientist,Senior,Media,Bachelors,Java,0.004761904761904762
+Research Scientist,Senior,Retail,Bachelors,Python,0.004761904761904762
+Research Scientist,Senior,Retail,Bachelors,SQL,0.004761904761904762
+Research Scientist,Senior,Technology,Masters,SQL,0.004761904761904762

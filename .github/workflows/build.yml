@@ -1,0 +1,94 @@
+name: Build distributions
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  # The notebook smoke deliberately lives in ci.yml only; both
+  # lanes installed the same wheel closure, so running it twice bought no signal.
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/uv-workspace
+
+      - name: Build the publish allowlist and export it to later steps
+        run: |
+          echo "PUBLIC_PACKAGES=$(make -s print-public-packages)" >> "$GITHUB_ENV"
+          echo "STAGE_PACKAGES=$(make -s print-stage-packages)" >> "$GITHUB_ENV"
+          make build
+
+      # --strict: twine reports a malformed long description as a warning by default, and a
+      # warning here is a PyPI page that renders as raw text once the version is frozen.
+      - run: uv run twine check --strict dist/*
+      - run: uv run pip-audit
+
+      - name: Verify the distribution contract
+        run: uv run python .github/scripts/verify_dist.py --dist dist -- $PUBLIC_PACKAGES
+
+      - name: Smoke each stage wheel in isolation
+        # Installed alone, so an undeclared runtime dependency cannot be satisfied by a
+        # sibling package that happens to be present.
+        run: |
+          set -e
+          for package in $STAGE_PACKAGES; do
+            venv="/tmp/$package-venv"
+            uv venv "$venv" --python 3.12
+            uv pip install --python "$venv/bin/python" "$(find dist -name "$package-*.whl")"
+            "$venv/bin/python" .github/scripts/wheel_smoke.py --package "$package"
+          done
+
+      - name: Smoke the five built wheels together
+        # Installed by path, so this asserts the artifacts just built coexist and import,
+        # with no chance of an index serving a same-version package instead.
+        run: |
+          uv venv /tmp/damicore-wheels-venv --python 3.12
+          uv pip install --python /tmp/damicore-wheels-venv/bin/python dist/*.whl
+          /tmp/damicore-wheels-venv/bin/python .github/scripts/wheel_smoke.py \
+            $(printf -- '--package %s ' $PUBLIC_PACKAGES)
+
+      - name: Install only damicore and run end to end
+        # A separate assertion from the step above: that damicore's declared dependency
+        # closure is complete and satisfiable on its own, and that its entry point works.
+        run: |
+          uv venv /tmp/damicore-e2e-venv --python 3.12
+          uv pip install --python /tmp/damicore-e2e-venv/bin/python --find-links dist damicore
+          /tmp/damicore-e2e-venv/bin/damicore --help
+          /tmp/damicore-e2e-venv/bin/python .github/scripts/wheel_smoke.py --pipeline
+
+      - name: Install damicore from source distributions only
+        # Every step above installs wheels. `pip install` falls back to the sdist whenever no
+        # wheel matches, and building one exercises a different path: the sdist has to carry
+        # the files pyproject.toml declares, which nothing else here checks. Third-party
+        # dependencies stay on wheels so this measures our own sdists, not numpy's build.
+        run: |
+          uv venv /tmp/damicore-sdist-venv --python 3.12
+          uv pip install --python /tmp/damicore-sdist-venv/bin/python --find-links dist \
+            $(printf -- '--no-binary %s ' $(echo "$PUBLIC_PACKAGES" | tr '_' '-')) damicore
+          /tmp/damicore-sdist-venv/bin/damicore --help
+          /tmp/damicore-sdist-venv/bin/python .github/scripts/wheel_smoke.py --pipeline
+
+      - name: Verify the wheels rebuild identically
+        run: |
+          DIST_DIR=/tmp/rebuilt make wheels
+          uv run python .github/scripts/verify_dist.py \
+            --dist dist --rebuilt /tmp/rebuilt -- $PUBLIC_PACKAGES
+
+      - uses: actions/upload-artifact@v7.0.1
+        with:
+          name: distributions
+          path: dist/*
+          if-no-files-found: error

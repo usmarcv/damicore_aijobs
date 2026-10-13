@@ -1,0 +1,45 @@
+version: 2
+
+updates:
+  # Security advisories are delivered when they are published rather than on this
+  # interval, so the schedule only paces routine version bumps.
+  - package-ecosystem: uv
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    # The declared ranges are contract, asserted by tests/architecture/test_boundaries.py;
+    # a routine bump must move the resolved pins in uv.lock, not rewrite the range floors,
+    # or every group update breaks that gate.
+    versioning-strategy: lockfile-only
+    # One pull request for the routine floor-raising, so the queue stays readable, and a
+    # separate one per major, where the whole point is to review the break on its own.
+    groups:
+      runtime-and-dev:
+        patterns: ["*"]
+        update-types: [minor, patch]
+
+  # Nothing else updates the action version tags, so without this they drift until a
+  # deprecation breaks a lane. Both directories are listed because `/` means exactly
+  # `.github/workflows` plus a root `action.yml` for this ecosystem: the composite action
+  # is in neither, and its `astral-sh/setup-uv` pin is the one ref that went stale while
+  # every ref in the workflows stayed current.
+  - package-ecosystem: github-actions
+    directories:
+      - /
+      - /.github/actions/uv-workspace
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
+
+  # Nothing else moves the pre-commit hook revisions, so without this they drift out of the
+  # workspace's ruff range until the hook and `make check` disagree about the same file.
+  - package-ecosystem: pre-commit
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      hooks:
+        patterns: ["*"]

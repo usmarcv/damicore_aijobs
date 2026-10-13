@@ -1,0 +1,30 @@
+coluna,valor,linhas,p_topo,salario_mediano,salario_maximo
+job_title,Analytics Engineer,14,0.14285714285714285,29261.0,55261
+job_title,Business Intelligence Analyst,14,0.14285714285714285,28509.0,53265
+job_title,Computer Vision Engineer,7,0.2857142857142857,44487.0,58467
+job_title,Data Science Manager,5,0.2,45948.0,71730
+job_title,LLM Engineer,9,0.3333333333333333,33860.0,64618
+job_title,MLOps Engineer,12,0.25,41162.0,58404
+experience_level,Executive,10,0.9,57817.0,74785
+industry,Education,10,0.0,26072.5,45783
+industry,Energy,9,0.3333333333333333,39135.0,56008
+industry,Government,12,0.0,30101.0,39862
+industry,Manufacturing,10,0.3,39044.0,69717
+industry,Media,14,0.21428571428571427,32892.5,64618
+education_level,Self-taught,8,0.25,35992.5,71697
+primary_language,Java,12,0.25,34180.5,62228
+primary_language,Julia,6,0.3333333333333333,31468.0,53897
+primary_language,R,10,0.3,29931.0,60842
+primary_language,Rust,1,0.0,27938.0,27938
+primary_language,Scala,10,0.2,35140.5,74785
+employment_type,Freelance,6,0.3333333333333333,24141.5,58404
+employment_type,Part-time,6,0.16666666666666666,20854.5,52583
+employee_residence,CA,1,1.0,66837.0,66837
+employee_residence,DE,3,0.6666666666666666,49738.0,53897
+employee_residence,ES,1,0.0,45571.0,45571
+employee_residence,FR,1,1.0,57167.0,57167
+employee_residence,GB,2,1.0,64570.5,73552
+employee_residence,IN,7,0.5714285714285714,54338.0,83582
+employee_residence,NL,3,0.0,21679.0,37558
+employee_residence,PL,1,1.0,53801.0,53801
+employee_residence,US,11,0.0,27931.0,47108

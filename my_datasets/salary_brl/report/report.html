@@ -1,0 +1,147 @@
+<title>Solução salarial BRL</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; the solution sheet and the evidence chart carry the page, method and tables follow. */
+:root {
+  --bg: #f6f8f9; --surface: #ffffff; --ink: #16242c; --ink-2: #4a5d68; --ink-3: #74858f;
+  --rule: #d5dde2; --accent: #1f6f8b; --accent-soft: #dcebf0; --muted-fill: #e9eef1;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #10181d; --surface: #172229; --ink: #e6edf1; --ink-2: #a9b8c1; --ink-3: #7f909a;
+  --rule: #2a3942; --accent: #58a9c4; --accent-soft: #1d3a46; --muted-fill: #1f2c34; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #10181d; --surface: #172229; --ink: #e6edf1; --ink-2: #a9b8c1; --ink-3: #7f909a;
+  --rule: #2a3942; --accent: #58a9c4; --accent-soft: #1d3a46; --muted-fill: #1f2c34; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.55; padding-inline: 16px; padding-block: 40px 64px; }
+main { max-width: 780px; margin-inline: auto; display: flex; flex-direction: column; gap: 44px; }
+section, header { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+h1 { font-size: 2rem; line-height: 1.15; font-weight: 600; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h2 { font-size: 1.2rem; font-weight: 600; margin: 0; text-wrap: balance; }
+p { margin: 0; max-width: 66ch; }
+.eyebrow { font-family: var(--mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+.lead { font-size: 1.1rem; color: var(--ink); }
+.note { color: var(--ink-2); font-size: .92rem; }
+code { font-family: var(--mono); font-size: .88em; }
+.scroll { overflow-x: auto; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+th, td { text-align: left; padding: 8px 12px; vertical-align: top; border-bottom: 1px solid var(--rule); }
+tr:last-child > td { border-bottom: 0; }
+thead th { font-family: var(--mono); font-size: .72rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.col { font-family: var(--mono); font-size: .84rem; color: var(--ink-2); white-space: nowrap; }
+td.val { font-weight: 600; }
+th.cl { font-family: var(--mono); font-size: .78rem; font-weight: 500; color: var(--ink-2); white-space: nowrap; background: var(--muted-fill); border-right: 1px solid var(--rule); }
+tr.w1 td.val { font-weight: 400; color: var(--ink-3); }
+.pill { display: inline-block; font-size: .75rem; padding: 1px 8px; border-radius: 999px; white-space: nowrap; border: 1px solid var(--rule); color: var(--ink-2); }
+.pill.w3 { background: var(--accent); border-color: var(--accent); color: var(--surface); font-weight: 600; }
+.pill.w2 { background: var(--accent-soft); border-color: var(--accent-soft); color: var(--ink); }
+.pill.w1 { border-style: dashed; color: var(--ink-3); }
+.chart { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 18px 16px; display: flex; flex-direction: column; gap: 10px; }
+.chart-head { display: grid; grid-template-columns: 64px 1fr; gap: 12px; font-family: var(--mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+.bar-row { display: grid; grid-template-columns: 64px 1fr; gap: 2px 12px; align-items: center; }
+.bar-label { font-family: var(--mono); font-size: .85rem; color: var(--ink-2); grid-row: span 2; }
+.bar-track { position: relative; display: flex; align-items: center; gap: 8px; min-width: 0; }
+.bar-track::before { content: ""; position: absolute; left: 46.7%; top: -4px; bottom: -4px; border-left: 1px dashed var(--ink-3); }
+.bar { height: 18px; background: var(--accent); border-radius: 0 4px 4px 0; flex: 0 0 auto; }
+.bar-row:hover .bar { filter: brightness(1.12); }
+.bar-value { font-size: .88rem; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bar-meta { font-size: .78rem; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.legend { font-size: .8rem; color: var(--ink-3); display: flex; align-items: center; gap: 8px; }
+.legend i { display: inline-block; height: 14px; border-left: 1px dashed var(--ink-3); }
+ol.steps { margin: 0; padding-left: 1.3em; display: flex; flex-direction: column; gap: 10px; max-width: 66ch; }
+ul.plain { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 8px; max-width: 66ch; }
+footer { color: var(--ink-3); font-size: .82rem; border-top: 1px solid var(--rule); padding-top: 14px; }
+</style>
+<main>
+<header>
+  <div class="eyebrow">DAMICORE · um ciclo de otimização · recorte salary_currency = BRL</div>
+  <h1>Solução escolhida para maior salário em BRL</h1>
+  <p class="lead">Entre as 210 vagas pagas em reais, os salários mais altos se concentram em quem é Lead, tem mais de 9,8 anos de experiência, gere pessoas, tem ML no nome do cargo, usa ferramentas de IA todo dia e trabalha em empresa grande. As 27 linhas reais que têm 4 ou mais dessas 6 características têm salário mediano de US$ 55.589, contra US$ 36.069 no recorte. O maior salário do recorte, US$ 83.582, está nesse grupo.</p>
+  <p class="note">Base: as 210 linhas de <code>main_ai_ds_job_salaries_2026.csv</code> com <code>salary_currency = BRL</code>, todas com empresa no Brasil. O ciclo seleciona as 53 mais bem pagas (a partir de US$ 47.431) e procura o que as distingue das demais. Com tão poucas linhas, leia a solução como indicação: cada afirmação abaixo vem com o número de linhas que a sustenta.</p>
+</header>
+
+<section>
+  <h2>A solução, cluster a cluster</h2>
+  <p class="note">Cada cluster contribui com seu melhor bloco de valores. O peso é forte quando a coluna separa bem as selecionadas e o valor escolhido supera as demais linhas por pelo menos 2 erros-padrão. Onde o peso é quase nenhum, o valor pode ser trocado sem alterar o resultado.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Cluster</th><th>Coluna</th><th>Valor escolhido</th><th class="n">Selecionadas</th><th class="n">Demais</th><th class="n">Mediana</th><th class="n">Máximo</th><th>Peso</th></tr></thead>
+    <tbody><tr class="w2"><th scope="rowgroup" rowspan="5" class="cl">Cluster 0</th><td class="col">job_title</td><td class="val">Machine Learning Engineer</td><td class="n">9 de 31 (29%)</td><td class="n">25%</td><td class="n">US$ 37.821</td><td class="n">US$ 83.582</td><td><span class="pill w2">moderado</span></td></tr><tr class="w3"><td class="col">experience_level</td><td class="val">Lead</td><td class="n">15 de 27 (56%)</td><td class="n">21%</td><td class="n">US$ 53.265</td><td class="n">US$ 83.582</td><td><span class="pill w3">forte</span></td></tr><tr class="w2"><td class="col">industry</td><td class="val">Technology</td><td class="n">17 de 57 (30%)</td><td class="n">24%</td><td class="n">US$ 38.169</td><td class="n">US$ 80.070</td><td><span class="pill w2">moderado</span></td></tr><tr class="w2"><td class="col">education_level</td><td class="val">Masters</td><td class="n">26 de 81 (32%)</td><td class="n">21%</td><td class="n">US$ 37.823</td><td class="n">US$ 83.582</td><td><span class="pill w2">moderado</span></td></tr><tr class="w2"><td class="col">primary_language</td><td class="val">Python</td><td class="n">33 de 120 (28%)</td><td class="n">22%</td><td class="n">US$ 37.914</td><td class="n">US$ 80.070</td><td><span class="pill w2">moderado</span></td></tr><tr class="w1"><th scope="rowgroup" rowspan="2" class="cl">Cluster 1</th><td class="col">employment_type</td><td class="val">Full-time</td><td class="n">46 de 180 (26%)</td><td class="n">23%</td><td class="n">US$ 37.098</td><td class="n">US$ 83.582</td><td><span class="pill w1">quase nenhum</span></td></tr><tr class="w1"><td class="col">employee_residence</td><td class="val">BR</td><td class="n">42 de 180 (23%)</td><td class="n">37%</td><td class="n">US$ 35.793</td><td class="n">US$ 80.070</td><td><span class="pill w1">quase nenhum</span></td></tr><tr class="w3"><th scope="rowgroup" rowspan="2" class="cl">Cluster 2</th><td class="col">company_size</td><td class="val">L</td><td class="n">13 de 32 (41%)</td><td class="n">22%</td><td class="n">US$ 42.443</td><td class="n">US$ 64.618</td><td><span class="pill w3">forte</span></td></tr><tr class="w1"><td class="col">remote_ratio</td><td class="val">50</td><td class="n">15 de 58 (26%)</td><td class="n">25%</td><td class="n">US$ 34.142</td><td class="n">US$ 71.730</td><td><span class="pill w1">quase nenhum</span></td></tr><tr class="w3"><th scope="rowgroup" rowspan="3" class="cl">Cluster 3</th><td class="col">years_experience</td><td class="val">alto (acima de 9,8)</td><td class="n">35 de 69 (51%)</td><td class="n">13%</td><td class="n">US$ 47.463</td><td class="n">US$ 83.582</td><td><span class="pill w3">forte</span></td></tr><tr class="w2"><td class="col">ai_tools_hours_per_week</td><td class="val">alto (acima de 11,4)</td><td class="n">22 de 70 (31%)</td><td class="n">22%</td><td class="n">US$ 36.338</td><td class="n">US$ 83.582</td><td><span class="pill w2">moderado</span></td></tr><tr class="w2"><td class="col">upskilling_hours_per_month</td><td class="val">médio (7 a 10,7)</td><td class="n">21 de 71 (30%)</td><td class="n">23%</td><td class="n">US$ 37.821</td><td class="n">US$ 83.582</td><td><span class="pill w2">moderado</span></td></tr><tr class="w3"><th scope="rowgroup" rowspan="4" class="cl">Cluster 4</th><td class="col">has_ml_in_title</td><td class="val">True</td><td class="n">28 de 79 (35%)</td><td class="n">19%</td><td class="n">US$ 39.205</td><td class="n">US$ 83.582</td><td><span class="pill w3">forte</span></td></tr><tr class="w3"><td class="col">manages_people</td><td class="val">True</td><td class="n">25 de 45 (56%)</td><td class="n">17%</td><td class="n">US$ 52.583</td><td class="n">US$ 83.582</td><td><span class="pill w3">forte</span></td></tr><tr class="w3"><td class="col">uses_ai_tools_daily</td><td class="val">True</td><td class="n">43 de 141 (30%)</td><td class="n">14%</td><td class="n">US$ 37.823</td><td class="n">US$ 83.582</td><td><span class="pill w3">forte</span></td></tr><tr class="w2"><td class="col">switched_jobs_last_year</td><td class="val">False</td><td class="n">42 de 158 (27%)</td><td class="n">21%</td><td class="n">US$ 36.879</td><td class="n">US$ 83.582</td><td><span class="pill w2">moderado</span></td></tr><tr class="w2"><th scope="rowgroup" rowspan="2" class="cl">Cluster 5</th><td class="col">team_size</td><td class="val">baixo (até 7)</td><td class="n">22 de 98 (22%)</td><td class="n">28%</td><td class="n">US$ 36.604</td><td class="n">US$ 74.785</td><td><span class="pill w2">moderado</span></td></tr><tr class="w2"><td class="col">certifications_count</td><td class="val">alto (acima de 2)</td><td class="n">18 de 53 (34%)</td><td class="n">22%</td><td class="n">US$ 41.708</td><td class="n">US$ 83.582</td><td><span class="pill w2">moderado</span></td></tr><tr class="w2"><th scope="rowgroup" rowspan="1" class="cl">Cluster 6</th><td class="col">weekly_hours</td><td class="val">alto (acima de 46,3)</td><td class="n">23 de 70 (33%)</td><td class="n">21%</td><td class="n">US$ 37.318</td><td class="n">US$ 83.582</td><td><span class="pill w2">moderado</span></td></tr></tbody>
+  </table></div>
+  <p class="note">“Selecionadas” é quantas das linhas com aquele valor estão entre as 53 mais bem pagas (a base é 25%); “Demais” é a mesma parcela nas linhas sem o valor. “Mediana” e “Máximo” são o <code>salary_usd</code> mediano e o maior entre as linhas com o valor.</p>
+</section>
+
+<section>
+  <h2>O salário sobe conforme a linha se aproxima da solução</h2>
+  <p>Contei, em cada uma das 210 linhas, quantas das 6 colunas de peso forte têm o valor escolhido. Com 0 ou 1 coluna o salário fica abaixo da mediana; a partir de 2 ele sobe a cada passo.</p>
+  <div class="chart" role="img" aria-label="Salário mediano por número de colunas fortes casadas com a solução">
+    <div class="chart-head"><span>Casadas</span><span>Salário mediano (salary_usd)</span></div>
+    <div class="bar-row" title="0 colunas: US$ 29.301, 30 linhas, 7% entre as selecionadas"><div class="bar-label">0</div><div class="bar-track"><div class="bar" style="width:38.0%"></div><span class="bar-value">US$ 29.301</span></div><div class="bar-meta">30 linhas · 7% entre as selecionadas · maior salário US$ 50.435</div></div><div class="bar-row" title="1 colunas: US$ 29.531, 59 linhas, 2% entre as selecionadas"><div class="bar-label">1</div><div class="bar-track"><div class="bar" style="width:38.2%"></div><span class="bar-value">US$ 29.531</span></div><div class="bar-meta">59 linhas · 2% entre as selecionadas · maior salário US$ 48.600</div></div><div class="bar-row" title="2 colunas: US$ 38.804, 66 linhas, 32% entre as selecionadas"><div class="bar-label">2</div><div class="bar-track"><div class="bar" style="width:50.3%"></div><span class="bar-value">US$ 38.804</span></div><div class="bar-meta">66 linhas · 32% entre as selecionadas · maior salário US$ 71.730</div></div><div class="bar-row" title="3 colunas: US$ 43.456, 28 linhas, 36% entre as selecionadas"><div class="bar-label">3</div><div class="bar-track"><div class="bar" style="width:56.3%"></div><span class="bar-value">US$ 43.456</span></div><div class="bar-meta">28 linhas · 36% entre as selecionadas · maior salário US$ 74.785</div></div><div class="bar-row" title="4 a 6 colunas: US$ 55.589, 27 linhas, 70% entre as selecionadas"><div class="bar-label">4 a 6</div><div class="bar-track"><div class="bar" style="width:72.0%"></div><span class="bar-value">US$ 55.589</span></div><div class="bar-meta">27 linhas · 70% entre as selecionadas · maior salário US$ 83.582</div></div>
+    <div class="legend"><i></i> mediana do recorte BRL: US$ 36.069 · maior salário do recorte: US$ 83.582</div>
+  </div>
+  <p class="note">Colunas de peso forte: <code>experience_level</code>, <code>company_size</code>, <code>years_experience</code>, <code>has_ml_in_title</code>, <code>manages_people</code>, <code>uses_ai_tools_daily</code>. Pelos blocos inteiros: 9 linhas casam com 3 dos 7 blocos escolhidos, e todas estão entre as selecionadas (mediana US$ 60.994); nenhuma linha casa com mais.</p>
+</section>
+
+<section>
+  <h2>Clusters que o DAMICORE encontrou no recorte</h2>
+  <p>Rodei o DAMICORE de novo nas 210 linhas. Saíram 7 clusters; quatro são idênticos aos do quartil e três mudaram: <code>company_location</code> e <code>employee_residence</code> foram para o cluster de <code>employment_type</code>, e <code>salary_usd</code> passou a ficar com <code>company_size</code>, <code>remote_ratio</code> e <code>equity_offered_pct</code>.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Cluster</th><th>Colunas</th><th>Frente ao quartil</th></tr></thead>
+    <tbody><tr><td>Cluster 0</td><td><code>job_title</code>, <code>experience_level</code>, <code>industry</code>, <code>education_level</code>, <code>primary_language</code></td><td>igual</td></tr><tr><td>Cluster 1</td><td><code>employment_type</code>, <code style="opacity:.55">company_location</code>, <code>employee_residence</code>, <code style="opacity:.55">salary_currency</code></td><td>mudou</td></tr><tr><td>Cluster 2</td><td><code>company_size</code>, <code>remote_ratio</code>, <code style="opacity:.55">salary_usd</code>, <code style="opacity:.55">equity_offered_pct</code></td><td>mudou</td></tr><tr><td>Cluster 3</td><td><code>years_experience</code>, <code>ai_tools_hours_per_week</code>, <code style="opacity:.55">bonus_pct</code>, <code>upskilling_hours_per_month</code></td><td>igual</td></tr><tr><td>Cluster 4</td><td><code>has_ml_in_title</code>, <code>manages_people</code>, <code>uses_ai_tools_daily</code>, <code>switched_jobs_last_year</code></td><td>igual</td></tr><tr><td>Cluster 5</td><td><code>team_size</code>, <code>certifications_count</code>, <code style="opacity:.55">interviews_to_offer</code></td><td>mudou</td></tr><tr><td>Cluster 6</td><td><code>weekly_hours</code>, <code style="opacity:.55">job_satisfaction_score</code>, <code style="opacity:.55">fears_ai_automation_score</code></td><td>igual</td></tr></tbody>
+  </table></div>
+  <p class="note">Colunas esmaecidas não entram na solução: são o objetivo, consequência do salário, ou constantes no recorte (<code>company_location</code> é sempre BR e <code>salary_currency</code> sempre BRL).</p>
+</section>
+
+<section>
+  <h2>Como o ciclo foi aplicado</h2>
+  <ol class="steps">
+    <li><b>DAMICORE.</b> Agrupamento das 27 colunas do recorte BRL em 7 clusters.</li>
+    <li><b>Seleção.</b> As 25% mais bem pagas das 210 linhas: 53 linhas.</li>
+    <li><b>Modelo probabilístico.</b> Para cada cluster, a frequência de cada bloco entre as selecionadas e no recorte inteiro. A razão entre as duas dá a chance de estar entre as selecionadas dado o bloco. Blocos com poucas linhas são puxados para o efeito de cada coluna isolada (peso de 20 linhas), e um valor só entra se aparecer em pelo menos 15 linhas.</li>
+    <li><b>Soluções candidatas.</b> Os 3 melhores blocos elegíveis de cada cluster (2 no cluster 1, que só tem dois), combinados entre os 7 clusters: 1.458 candidatas, ordenadas pelo produto das razões de chance.</li>
+    <li><b>Solução escolhida.</b> A candidata de maior pontuação, conferida contra linhas reais.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>As 10 melhores candidatas</h2>
+  <p class="note">Todas compartilham o mesmo núcleo; diferem em um ou dois clusters, quase sempre em colunas de peso moderado ou nenhum. A pontuação é relativa à escolhida e serve só para ordenar.</p>
+  <div class="scroll"><table>
+    <thead><tr><th class="n">#</th><th class="n">Pontuação</th><th>Diferença em relação à escolhida</th></tr></thead>
+    <tbody><tr><td class="n">1</td><td class="n">100%</td><td>Melhor bloco em todos os clusters (solução escolhida)</td></tr><tr><td class="n">2</td><td class="n">91%</td><td><b>Cluster 5</b>: team_size=médio (7 a 9), certifications_count=alto (acima de 2)</td></tr><tr><td class="n">3</td><td class="n">88%</td><td><b>Cluster 0</b>: job_title=Data Engineer, experience_level=Lead, industry=Technology, education_level=Masters, primary_language=Python</td></tr><tr><td class="n">4</td><td class="n">84%</td><td><b>Cluster 5</b>: team_size=alto (acima de 9), certifications_count=alto (acima de 2)</td></tr><tr><td class="n">5</td><td class="n">82%</td><td><b>Cluster 2</b>: company_size=L, remote_ratio=0</td></tr><tr><td class="n">6</td><td class="n">80%</td><td><b>Cluster 0</b>: job_title=Data Engineer, experience_level=Lead, industry=Technology, education_level=Masters, primary_language=Python<br><b>Cluster 5</b>: team_size=médio (7 a 9), certifications_count=alto (acima de 2)</td></tr><tr><td class="n">7</td><td class="n">77%</td><td><b>Cluster 3</b>: years_experience=alto (acima de 9,8), ai_tools_hours_per_week=médio (4,27 a 11,4), upskilling_hours_per_month=médio (7 a 10,7)</td></tr><tr><td class="n">8</td><td class="n">75%</td><td><b>Cluster 2</b>: company_size=L, remote_ratio=0<br><b>Cluster 5</b>: team_size=médio (7 a 9), certifications_count=alto (acima de 2)</td></tr><tr><td class="n">9</td><td class="n">74%</td><td><b>Cluster 2</b>: company_size=L, remote_ratio=100</td></tr><tr><td class="n">10</td><td class="n">74%</td><td><b>Cluster 0</b>: job_title=Data Engineer, experience_level=Lead, industry=Technology, education_level=Masters, primary_language=Python<br><b>Cluster 5</b>: team_size=alto (acima de 9), certifications_count=alto (acima de 2)</td></tr></tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>Melhor bloco de cada cluster</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Cluster</th><th>Bloco</th><th class="n">Selecionadas</th><th class="n">Estimativa</th><th class="n">Mediana</th><th class="n">Máximo</th></tr></thead>
+    <tbody><tr><td>Cluster 0</td><td>job_title = Machine Learning Engineer, experience_level = Lead, industry = Technology, education_level = Masters, primary_language = Python</td><td class="n">1 de 1</td><td class="n">75%</td><td class="n">US$ 73.552</td><td class="n">US$ 73.552</td></tr><tr><td>Cluster 1</td><td>employment_type = Full-time, employee_residence = BR</td><td class="n">38 de 155</td><td class="n">24%</td><td class="n">US$ 36.551</td><td class="n">US$ 80.070</td></tr><tr><td>Cluster 2</td><td>company_size = L, remote_ratio = 50</td><td class="n">3 de 5</td><td class="n">45%</td><td class="n">US$ 55.261</td><td class="n">US$ 60.994</td></tr><tr><td>Cluster 3</td><td>years_experience = alto (acima de 9,8), ai_tools_hours_per_week = alto (acima de 11,4), upskilling_hours_per_month = médio (7 a 10,7)</td><td class="n">3 de 3</td><td class="n">68%</td><td class="n">US$ 61.040</td><td class="n">US$ 83.582</td></tr><tr><td>Cluster 4</td><td>has_ml_in_title = True, manages_people = True, uses_ai_tools_daily = True, switched_jobs_last_year = False</td><td class="n">8 de 8</td><td class="n">81%</td><td class="n">US$ 61.688</td><td class="n">US$ 83.582</td></tr><tr><td>Cluster 5</td><td>team_size = baixo (até 7), certifications_count = alto (acima de 2)</td><td class="n">8 de 19</td><td class="n">36%</td><td class="n">US$ 41.872</td><td class="n">US$ 69.717</td></tr><tr><td>Cluster 6</td><td>weekly_hours = alto (acima de 46,3)</td><td class="n">23 de 70</td><td class="n">33%</td><td class="n">US$ 37.318</td><td class="n">US$ 83.582</td></tr></tbody>
+  </table></div>
+  <p class="note">“Selecionadas” é a contagem observada nas linhas do bloco; “Estimativa” é o valor usado para ordenar, depois do ajuste para blocos com poucas linhas. Os blocos dos clusters 0, 2, 3 e 4 existem em menos de 15 linhas: valem pelo efeito de cada coluna, não como combinação observada.</p>
+</section>
+
+<section>
+  <h2>Valores que ficaram fora por terem poucas linhas</h2>
+  <p>O mínimo de 15 linhas tirou da disputa alguns valores com bom resultado. O principal é <code>experience_level = Executive</code>: 9 das 10 linhas estão entre as selecionadas. São poucas linhas para o método afirmar, mas a direção é a mesma de Lead, e mais forte.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Coluna</th><th>Valor</th><th class="n">Selecionadas</th><th class="n">Mediana</th><th class="n">Máximo</th></tr></thead>
+    <tbody><tr><td class="col">experience_level</td><td class="val">Executive</td><td class="n">9 de 10</td><td class="n">US$ 57.817</td><td class="n">US$ 74.785</td></tr><tr><td class="col">employee_residence</td><td class="val">IN</td><td class="n">4 de 7</td><td class="n">US$ 54.338</td><td class="n">US$ 83.582</td></tr><tr><td class="col">job_title</td><td class="val">LLM Engineer</td><td class="n">3 de 9</td><td class="n">US$ 33.860</td><td class="n">US$ 64.618</td></tr><tr><td class="col">industry</td><td class="val">Energy</td><td class="n">3 de 9</td><td class="n">US$ 39.135</td><td class="n">US$ 56.008</td></tr><tr><td class="col">primary_language</td><td class="val">Julia</td><td class="n">2 de 6</td><td class="n">US$ 31.468</td><td class="n">US$ 53.897</td></tr></tbody>
+  </table></div>
+  <p class="note">Os cinco valores excluídos com maior parcela entre as selecionadas, entre os que têm pelo menos 5 linhas. A lista completa está em <code>valores_fora_por_poucas_linhas.csv</code>.</p>
+</section>
+
+<section>
+  <h2>Ressalvas</h2>
+  <ul class="plain">
+    <li>A amostra é pequena: 210 linhas, 53 selecionadas. Diferenças de até uns 10 pontos entre valores de uma coluna estão dentro do ruído, e por isso só 6 colunas receberam peso forte.</li>
+    <li>O cargo escolhido (Machine Learning Engineer) tem peso moderado: sozinho, 9 de 31 linhas estão entre as selecionadas, pouco acima da base. Ele entrou porque o bloco do cluster 0 existe em 1 linha real muito bem paga.</li>
+    <li>Os números descrevem associação nas linhas observadas, não efeito causal.</li>
+    <li>A conferência usa as mesmas linhas que geraram a solução; não há amostra separada de validação.</li>
+    <li>Os valores são em dólar: o teto do recorte é US$ 83.582 e nenhuma linha BRL chega ao quartil superior do dataset geral (a partir de US$ 129.658).</li>
+    <li>Ficaram fora da solução, por serem consequência e não escolha: <code>bonus_pct</code>, <code>equity_offered_pct</code>, <code>interviews_to_offer</code>, <code>job_satisfaction_score</code> e <code>fears_ai_automation_score</code>.</li>
+  </ul>
+</section>
+<footer>Gerado a partir de <code>salary_solutions_brl.ipynb</code> e dos arquivos em <code>my_datasets/salary_brl/</code>.</footer>
+</main>

@@ -1,0 +1,347 @@
+{
+  "receipts": {
+    "clusterizing": {
+      "finished_at": "2026-10-09T16:27:52.428148+00:00",
+      "inputs": [
+        {
+          "path": "tree.json",
+          "sha256": "54dc64477224155ce57ef6b4f9e8b48c7cb7be3bc4cbcb6ce7905e3fc50e645d",
+          "size_bytes": 10585
+        }
+      ],
+      "metrics": {
+        "cluster_count": 7,
+        "community_count": 7,
+        "modularity": 0.7298755504844445,
+        "seconds": 0.02745963600136747
+      },
+      "outputs": [
+        {
+          "path": "membership.csv",
+          "sha256": "30a8c98383d47b2e3a24319d0760969731207da2595b972e9000cdb511497093",
+          "size_bytes": 915
+        },
+        {
+          "path": "clusters.json",
+          "sha256": "335bac77e0b97ca3c1c4a196b52602ce82bd5950d306e5edde8448980479ff77",
+          "size_bytes": 2093
+        }
+      ],
+      "runtime": {
+        "damicore": "0.2.0",
+        "damicore-clusterizer": "0.2.0",
+        "damicore-distance": "0.2.0",
+        "damicore-normalizer": "0.2.0",
+        "damicore-tree-builder": "0.2.0",
+        "igraph": "1.0.0",
+        "numpy": "2.1.3",
+        "pandas": "2.2.3",
+        "platform": "Linux-6.11.0-29-generic-x86_64-with-glibc2.39",
+        "pydantic": "2.13.4",
+        "python": "3.12.13",
+        "tqdm": "4.70.0",
+        "zlib_build": "1.3.2",
+        "zlib_runtime": "1.3.2"
+      },
+      "started_at": "2026-10-09T16:27:52.400850+00:00",
+      "status": "completed"
+    },
+    "distancing": {
+      "finished_at": "2026-10-09T16:27:52.340352+00:00",
+      "inputs": [
+        {
+          "path": "normalization/manifest.json",
+          "sha256": "59317f4c7cc25a601bf8034233497b3770f9bcd5b2bacf0d245dae0e16d0e9d4",
+          "size_bytes": 7060
+        }
+      ],
+      "metrics": {
+        "object_count": 27,
+        "pair_count": 351,
+        "seconds": 0.3486913179986004
+      },
+      "outputs": [
+        {
+          "path": "distance.npy",
+          "sha256": "7ad8927dd3428e5da15bc7d44dc511074fdd5fe124fec9e9a6eac304bfff390b",
+          "size_bytes": 5960
+        },
+        {
+          "path": "labels.json",
+          "sha256": "2ef65be7110597300b666e23e24ba41f47223c3b083496c6e41129650697c280",
+          "size_bytes": 1281
+        },
+        {
+          "path": "checkpoints/compressed-sizes.json",
+          "sha256": "9030c350c6d8fae8afc62e8a4f50060a26d0682809c7ce6d50f71e23e493e374",
+          "size_bytes": 1435
+        },
+        {
+          "path": "checkpoints/distance-shards.json",
+          "sha256": "e05f215ea41fde4d93f37d91e67dd71d002e2f16facf9c451bdea805b616044e",
+          "size_bytes": 1328
+        }
+      ],
+      "runtime": {
+        "damicore": "0.2.0",
+        "damicore-clusterizer": "0.2.0",
+        "damicore-distance": "0.2.0",
+        "damicore-normalizer": "0.2.0",
+        "damicore-tree-builder": "0.2.0",
+        "igraph": "1.0.0",
+        "numpy": "2.1.3",
+        "pandas": "2.2.3",
+        "platform": "Linux-6.11.0-29-generic-x86_64-with-glibc2.39",
+        "pydantic": "2.13.4",
+        "python": "3.12.13",
+        "tqdm": "4.70.0",
+        "zlib_build": "1.3.2",
+        "zlib_runtime": "1.3.2"
+      },
+      "started_at": "2026-10-09T16:27:51.991945+00:00",
+      "status": "completed"
+    },
+    "normalizing": {
+      "finished_at": "2026-10-09T16:27:51.976619+00:00",
+      "inputs": [
+        {
+          "path": "/home/lobo/github/damicore/my_datasets/salary_dataset_quartil1.csv",
+          "sha256": "87381fbe98050e75510ebf4f07d8d95a82a479d3a37906e4a1add737a9df9fc2",
+          "size_bytes": 179210
+        }
+      ],
+      "metrics": {
+        "normalized_bytes": 246251,
+        "object_count": 27,
+        "seconds": 0.06484673200066027
+      },
+      "outputs": [
+        {
+          "path": "normalization/manifest.json",
+          "sha256": "59317f4c7cc25a601bf8034233497b3770f9bcd5b2bacf0d245dae0e16d0e9d4",
+          "size_bytes": 7060
+        },
+        {
+          "path": "normalization/objects/column_000001.jsonl",
+          "sha256": "d70a76cf12ff9eb5ee215915b219b820996785e7b8a83c71a48edc1329565d53",
+          "size_bytes": 24546
+        },
+        {
+          "path": "normalization/objects/column_000002.jsonl",
+          "sha256": "dbba3d962e6af5c1b8d0931f3b157bc33cd76bb9f0e1da71c55682f9008bd315",
+          "size_bytes": 10336
+        },
+        {
+          "path": "normalization/objects/column_000003.jsonl",
+          "sha256": "62f240ae21225de6aab370cef0dd495588ccb8a147942076242160d9f5b4f325",
+          "size_bytes": 14911
+        },
+        {
+          "path": "normalization/objects/column_000004.jsonl",
+          "sha256": "a721039e1676001a105eceaa0f7eea1950db57e47d8c088582de31867db7f5dd",
+          "size_bytes": 5000
+        },
+        {
+          "path": "normalization/objects/column_000005.jsonl",
+          "sha256": "741e152db74014d42e2438a2f95d96a68e6771b0f4698088d83d8aad8014b74b",
+          "size_bytes": 6250
+        },
+        {
+          "path": "normalization/objects/column_000006.jsonl",
+          "sha256": "bdd83981a030b42a62a7807dadc239d2954fd7a3b84a382bd85b40f89f893e96",
+          "size_bytes": 6250
+        },
+        {
+          "path": "normalization/objects/column_000007.jsonl",
+          "sha256": "b2470bd729710dac994ca34d23fff2a787b4799c3838d7293a428e316ebe831e",
+          "size_bytes": 14731
+        },
+        {
+          "path": "normalization/objects/column_000008.jsonl",
+          "sha256": "271bb10427385285c15d296046ef033f01cf252374bece9ec457e6e54cc3df8b",
+          "size_bytes": 6129
+        },
+        {
+          "path": "normalization/objects/column_000009.jsonl",
+          "sha256": "f024f37f8f488e5e726351da95afd755e1d2852e35ec0bd246f1a75d0b925664",
+          "size_bytes": 8284
+        },
+        {
+          "path": "normalization/objects/column_000010.jsonl",
+          "sha256": "b15905304927b6fd30d82ded45ed09394feb8aea871c437c46a9ff1bfc938161",
+          "size_bytes": 12860
+        },
+        {
+          "path": "normalization/objects/column_000011.jsonl",
+          "sha256": "cb5ee1e625ddf64df8015d9aa5abe619c4d4a32fd1c805a7773a59d6fbb46f62",
+          "size_bytes": 9939
+        },
+        {
+          "path": "normalization/objects/column_000012.jsonl",
+          "sha256": "2ffc46b5e94679645c6f65b1a526e6c6ae5824336a603ccfecf16b26e1ce9233",
+          "size_bytes": 9399
+        },
+        {
+          "path": "normalization/objects/column_000013.jsonl",
+          "sha256": "64922d2fc444fef2652470600a106bcff708ff5ea4a58e72641dd0f300931ddb",
+          "size_bytes": 9474
+        },
+        {
+          "path": "normalization/objects/column_000014.jsonl",
+          "sha256": "10a7a63d7ef28abc0654bd530b063d4ac651bbcc1f3b7b48cb22c61a2d441987",
+          "size_bytes": 5348
+        },
+        {
+          "path": "normalization/objects/column_000015.jsonl",
+          "sha256": "b0262dd47def6053830aa5133e1192c3edf6f03939c1b82bcd6f87108ae30f73",
+          "size_bytes": 5000
+        },
+        {
+          "path": "normalization/objects/column_000016.jsonl",
+          "sha256": "7bfa7b1689c37854fe590d7d31d1079950bfea60636e8569e844d5f8e1e0bae5",
+          "size_bytes": 8750
+        },
+        {
+          "path": "normalization/objects/column_000017.jsonl",
+          "sha256": "4fb49db0f216f80beacf36056713ec69d44d37f7ac704b72531a523865025bf3",
+          "size_bytes": 9019
+        },
+        {
+          "path": "normalization/objects/column_000018.jsonl",
+          "sha256": "59cef85f139729c29a7b7c64e535b3e034a5922cdf2297937e37af6503e21ec3",
+          "size_bytes": 8079
+        },
+        {
+          "path": "normalization/objects/column_000019.jsonl",
+          "sha256": "9fd66f146b45447770d148a6800d6ca2b942d7d21fa6238ce41b89ce4f003016",
+          "size_bytes": 7500
+        },
+        {
+          "path": "normalization/objects/column_000020.jsonl",
+          "sha256": "d9f63c4bf6d206efecbcb247e64aaa786f7bb4d5cd7f38b9df319fa2faab5df4",
+          "size_bytes": 11250
+        },
+        {
+          "path": "normalization/objects/column_000021.jsonl",
+          "sha256": "569e61aed45ba7efc1bbcaffb72bf596ec04811e7e105e064e6d9de7055bbefa",
+          "size_bytes": 6989
+        },
+        {
+          "path": "normalization/objects/column_000022.jsonl",
+          "sha256": "f4f0fd341b3ce853df8b1f951bd38a19521d803b93249559ad523d8476a134b4",
+          "size_bytes": 8442
+        },
+        {
+          "path": "normalization/objects/column_000023.jsonl",
+          "sha256": "2c2746930e79a1670c8ddfbb972bdd3f0588f9b4ec747731825e35f286ff12d8",
+          "size_bytes": 7520
+        },
+        {
+          "path": "normalization/objects/column_000024.jsonl",
+          "sha256": "ecfa36462370c1b27d134a039aa1cc0aaf8bd0efad2051e61c4a6a1ddce0f7ea",
+          "size_bytes": 5094
+        },
+        {
+          "path": "normalization/objects/column_000025.jsonl",
+          "sha256": "5204578b278f7bb5a358874662d73b6d7bb696aac3435074c8c35c39d7c0ccb1",
+          "size_bytes": 9708
+        },
+        {
+          "path": "normalization/objects/column_000026.jsonl",
+          "sha256": "3f762abf1322a07c9435aead94178c771072f952d0f803b5f6ee9ac18658a4fb",
+          "size_bytes": 7943
+        },
+        {
+          "path": "normalization/objects/column_000027.jsonl",
+          "sha256": "43fe3a5956510513af904ba4b24b9c63f279b7a4cc67c7de1be428b5d0c4be49",
+          "size_bytes": 7500
+        }
+      ],
+      "runtime": {
+        "damicore": "0.2.0",
+        "damicore-clusterizer": "0.2.0",
+        "damicore-distance": "0.2.0",
+        "damicore-normalizer": "0.2.0",
+        "damicore-tree-builder": "0.2.0",
+        "igraph": "1.0.0",
+        "numpy": "2.1.3",
+        "pandas": "2.2.3",
+        "platform": "Linux-6.11.0-29-generic-x86_64-with-glibc2.39",
+        "pydantic": "2.13.4",
+        "python": "3.12.13",
+        "tqdm": "4.70.0",
+        "zlib_build": "1.3.2",
+        "zlib_runtime": "1.3.2"
+      },
+      "started_at": "2026-10-09T16:27:51.913675+00:00",
+      "status": "completed"
+    },
+    "tree_building": {
+      "finished_at": "2026-10-09T16:27:52.387691+00:00",
+      "inputs": [
+        {
+          "path": "distance.npy",
+          "sha256": "7ad8927dd3428e5da15bc7d44dc511074fdd5fe124fec9e9a6eac304bfff390b",
+          "size_bytes": 5960
+        },
+        {
+          "path": "labels.json",
+          "sha256": "2ef65be7110597300b666e23e24ba41f47223c3b083496c6e41129650697c280",
+          "size_bytes": 1281
+        }
+      ],
+      "metrics": {
+        "leaf_count": 27,
+        "negative_branch_count": 0,
+        "seconds": 0.03502406499865174
+      },
+      "outputs": [
+        {
+          "path": "tree.json",
+          "sha256": "54dc64477224155ce57ef6b4f9e8b48c7cb7be3bc4cbcb6ce7905e3fc50e645d",
+          "size_bytes": 10585
+        },
+        {
+          "path": "tree.nwk",
+          "sha256": "dadcb469885f0493fab3694825c205463145899d33c7d8f53e83dc1576811da0",
+          "size_bytes": 1814
+        }
+      ],
+      "runtime": {
+        "damicore": "0.2.0",
+        "damicore-clusterizer": "0.2.0",
+        "damicore-distance": "0.2.0",
+        "damicore-normalizer": "0.2.0",
+        "damicore-tree-builder": "0.2.0",
+        "igraph": "1.0.0",
+        "numpy": "2.1.3",
+        "pandas": "2.2.3",
+        "platform": "Linux-6.11.0-29-generic-x86_64-with-glibc2.39",
+        "pydantic": "2.13.4",
+        "python": "3.12.13",
+        "tqdm": "4.70.0",
+        "zlib_build": "1.3.2",
+        "zlib_runtime": "1.3.2"
+      },
+      "started_at": "2026-10-09T16:27:52.352834+00:00",
+      "status": "completed"
+    }
+  },
+  "runtime": {
+    "damicore": "0.2.0",
+    "damicore-clusterizer": "0.2.0",
+    "damicore-distance": "0.2.0",
+    "damicore-normalizer": "0.2.0",
+    "damicore-tree-builder": "0.2.0",
+    "igraph": "1.0.0",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "platform": "Linux-6.11.0-29-generic-x86_64-with-glibc2.39",
+    "pydantic": "2.13.4",
+    "python": "3.12.13",
+    "tqdm": "4.70.0",
+    "zlib_build": "1.3.2",
+    "zlib_runtime": "1.3.2"
+  },
+  "schema_version": 1
+}

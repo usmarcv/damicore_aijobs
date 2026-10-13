@@ -1,0 +1,17 @@
+has_ml_in_title,manages_people,uses_ai_tools_daily,switched_jobs_last_year,prob_set
+True,False,True,False,0.1912
+False,False,True,False,0.1488
+False,True,True,False,0.1328
+True,True,True,False,0.1216
+False,False,False,False,0.0672
+True,False,True,True,0.0584
+False,True,False,False,0.0552
+True,True,True,True,0.0456
+False,False,True,True,0.0456
+False,True,True,True,0.0408
+True,False,False,False,0.0376
+False,False,False,True,0.0208
+True,True,False,False,0.012
+True,False,False,True,0.0096
+False,True,False,True,0.008
+True,True,False,True,0.0048

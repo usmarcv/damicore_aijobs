@@ -1,0 +1,632 @@
+{
+  "artifacts": {
+    "checkpoints/compressed-sizes.json": {
+      "path": "checkpoints/compressed-sizes.json",
+      "sha256": "c6e1d635f76e322a2ffd99d9602ee97eaebfd3b75453dd9cb4cfe3c3bd552c0b",
+      "size_bytes": 1451
+    },
+    "checkpoints/distance-shards.json": {
+      "path": "checkpoints/distance-shards.json",
+      "sha256": "92e15aec8187558cd9824adedc194ba7b64c01e0201a99eed1a8aeadebf9a733",
+      "size_bytes": 1328
+    },
+    "checkpoints/pipeline.json": {
+      "path": "checkpoints/pipeline.json",
+      "sha256": "ae5a7a8afca926c7e600e2077f1bc628c5a8c8162aacfc73fce44f0c2ba0a907",
+      "size_bytes": 11984
+    },
+    "clusters.json": {
+      "path": "clusters.json",
+      "sha256": "883dbadfd80f99ff76c3fd4a53472387c55c091f1dfe326edc145c9eb60d1d1b",
+      "size_bytes": 2093
+    },
+    "distance.npy": {
+      "path": "distance.npy",
+      "sha256": "d1a93514326a53626e094a0f679995b10ee0e9e56e817c770d6cf489e2f9d634",
+      "size_bytes": 5960
+    },
+    "labels.json": {
+      "path": "labels.json",
+      "sha256": "2ef65be7110597300b666e23e24ba41f47223c3b083496c6e41129650697c280",
+      "size_bytes": 1281
+    },
+    "membership.csv": {
+      "path": "membership.csv",
+      "sha256": "7f1cf0ca3df3aeec7bd15ffa01e2492d2bb0ad806a4807d7e9fa3c4b78e6daba",
+      "size_bytes": 915
+    },
+    "report.json": {
+      "path": "report.json",
+      "sha256": "732af1db63146689eff4accde6e77a0854a1c9950382402aeb1e97b00b8a6e13",
+      "size_bytes": 1011
+    },
+    "tree.json": {
+      "path": "tree.json",
+      "sha256": "873acab4190896a1c39b6a76635e901576f0ec99ff125d22577511c5f154766b",
+      "size_bytes": 10573
+    },
+    "tree.nwk": {
+      "path": "tree.nwk",
+      "sha256": "3276077f95c4d685d59f1702de0860e7bdcb74e887fff6cf05617874aa19d2c9",
+      "size_bytes": 1802
+    }
+  },
+  "cleanup_completed": true,
+  "completed_at": "2026-08-20T22:32:38.090623+00:00",
+  "config": {
+    "compression_chunk_bytes": 4194304,
+    "compression_level": 6,
+    "compressor": "zlib",
+    "csv_chunk_rows": 50000,
+    "delimiter": ",",
+    "encoding": "utf-8",
+    "include_hidden": null,
+    "keep_normalized": false,
+    "limits": {
+      "max_matrix_bytes": 536870912,
+      "max_objects": 1000,
+      "max_pairs": 500000,
+      "max_working_memory_bytes": 536870912,
+      "required_free_disk_factor": 1.25
+    },
+    "num_clusters": null,
+    "pairs_per_shard": 10000,
+    "pandas_materialization_limit_bytes": 268435456,
+    "recursive": null,
+    "save_diagnostics": false,
+    "sheet": null,
+    "source_kind": "delimited",
+    "split": "columns",
+    "workers": 4
+  },
+  "config_hash": "43b297efc89bfeb426f99043e76887453b800397b8ea49032055caf563c23f0b",
+  "created_at": "2026-08-20T22:32:36.867198+00:00",
+  "damicore_version": "0.2.0",
+  "estimate": {
+    "available_free_disk_bytes": 194214141952,
+    "effective_workers": 4,
+    "estimated_artifact_bytes": 2164999,
+    "estimated_diagnostic_bytes": 0,
+    "estimated_final_metadata_bytes": 1162624,
+    "estimated_working_memory_bytes": 33794432,
+    "input_sha256": "9f5a38a665df96d6a4f039bb5e38b5e5c5591045c9fd7f7afe3f38d9666f6867",
+    "input_size_bytes": 720914,
+    "matrix_bytes": 5832,
+    "max_serialized_chunk_bytes": 990455,
+    "normalized_bytes": 990455,
+    "object_count": 27,
+    "pair_count": 351,
+    "required_free_disk_bytes": 2706249,
+    "source_kind": "delimited",
+    "source_paths": [
+      "/home/lobo/github/damicore/my_datasets/dataset_ai_ds_job_salaries_2026.csv"
+    ],
+    "split": "columns",
+    "tree_workspace_bytes": 5832,
+    "violations": [],
+    "within_limits": true
+  },
+  "failed_stage": null,
+  "input": {
+    "kind": "delimited",
+    "paths": [
+      "/home/lobo/github/damicore/my_datasets/dataset_ai_ds_job_salaries_2026.csv"
+    ],
+    "sha256": "9f5a38a665df96d6a4f039bb5e38b5e5c5591045c9fd7f7afe3f38d9666f6867",
+    "size_bytes": 720914
+  },
+  "objects": [
+    {
+      "label": "job_title",
+      "object_id": "column_000001",
+      "sha256": "6a110ecd9f58c6fe0a7002e249fe61df6b38b0088cb5bbcf46cde3775792c16d",
+      "size_bytes": 97932
+    },
+    {
+      "label": "experience_level",
+      "object_id": "column_000002",
+      "sha256": "304bcfa9b9ff32f8b6715ac564f6514c57e9717349bf0eaca80da9d3a603ea4d",
+      "size_bytes": 38542
+    },
+    {
+      "label": "employment_type",
+      "object_id": "column_000003",
+      "sha256": "5bfba18c178786b1287ae14cfa1a732ece192b991762cd1c3c2bac5788468a51",
+      "size_bytes": 59582
+    },
+    {
+      "label": "company_size",
+      "object_id": "column_000004",
+      "sha256": "088b9270db3f2262fa3a5f8929ea06f557df6b846a17014c8128ae9d7054b9ba",
+      "size_bytes": 20000
+    },
+    {
+      "label": "company_location",
+      "object_id": "column_000005",
+      "sha256": "1d949aae0291312a95216960ebd4758db38d60761de76269116ef78d26ed589c",
+      "size_bytes": 25000
+    },
+    {
+      "label": "employee_residence",
+      "object_id": "column_000006",
+      "sha256": "1b417e2d64487d4e31e95397b069c1196d5ce1c208896b2e9b449d6bd1755f48",
+      "size_bytes": 25000
+    },
+    {
+      "label": "industry",
+      "object_id": "column_000007",
+      "sha256": "d33f0997fd0797ba6dfdfee91ed19b3dc7037dcf01aa90dbafef719557786c66",
+      "size_bytes": 59341
+    },
+    {
+      "label": "remote_ratio",
+      "object_id": "column_000008",
+      "sha256": "65ab056b8c7fc94ead991d971dec6b9d334db0a58571928b9ae2ee2bf12cc8d0",
+      "size_bytes": 24308
+    },
+    {
+      "label": "years_experience",
+      "object_id": "column_000009",
+      "sha256": "a0167f0a7fd0abff03525b2e3b8c77acb521e246198bfa449b470b4f6842c9b2",
+      "size_bytes": 31815
+    },
+    {
+      "label": "education_level",
+      "object_id": "column_000010",
+      "sha256": "178ca7d578a123a79dc70198fe63e54d60456de1c79434e49f9b4b0d0e285aa0",
+      "size_bytes": 53351
+    },
+    {
+      "label": "primary_language",
+      "object_id": "column_000011",
+      "sha256": "bcda2387af1cc66abf8f6dcc576f3ef5ca4ac56b5c55e5fb9397263b7bf1c1d4",
+      "size_bytes": 39786
+    },
+    {
+      "label": "has_ml_in_title",
+      "object_id": "column_000012",
+      "sha256": "08655103e376e6151d53c66158f44eaeac38979f0a6a2b059b56e923d9f21309",
+      "size_bytes": 38172
+    },
+    {
+      "label": "manages_people",
+      "object_id": "column_000013",
+      "sha256": "a069f9f2efab60e4fbe896eacabdaf6757dd8c564ad6954d9422f31bd5d7dae6",
+      "size_bytes": 38860
+    },
+    {
+      "label": "team_size",
+      "object_id": "column_000014",
+      "sha256": "371ff2a5ef10ff2d344bafd361d542749da2fc54cacf5fbc205a5d425156c0f0",
+      "size_bytes": 21326
+    },
+    {
+      "label": "certifications_count",
+      "object_id": "column_000015",
+      "sha256": "155e0162ab47eae107f81a3ab003b5a270a5b2dca63a870c25918b46b15b6a2c",
+      "size_bytes": 20000
+    },
+    {
+      "label": "weekly_hours",
+      "object_id": "column_000016",
+      "sha256": "dbd5719ded5fde1faa25a59ab97e2c1344ce3273b58a8da599479bf61b46bbc1",
+      "size_bytes": 35000
+    },
+    {
+      "label": "uses_ai_tools_daily",
+      "object_id": "column_000017",
+      "sha256": "6b9bfc1627e245bebc580a9d48808b4f685caab59d64a5154c5b831bd16f718a",
+      "size_bytes": 36484
+    },
+    {
+      "label": "ai_tools_hours_per_week",
+      "object_id": "column_000018",
+      "sha256": "1357e253ad3cfffea1e1248ee67cf79d90ff34c273e3e26d1db2e23fea55bbfd",
+      "size_bytes": 32065
+    },
+    {
+      "label": "salary_currency",
+      "object_id": "column_000019",
+      "sha256": "06ee49d30417c9d365ab5e4ab48cf0b9d4f31a0e3f3ff8fa9a54919293ac247c",
+      "size_bytes": 30000
+    },
+    {
+      "label": "salary_usd",
+      "object_id": "column_000020",
+      "sha256": "eef5657ed5e1b158468e666d9e36c280d527017638fb47dd83c468f3c0056116",
+      "size_bytes": 42183
+    },
+    {
+      "label": "equity_offered_pct",
+      "object_id": "column_000021",
+      "sha256": "6aab8dc13fa9a5dbdb22cfcc5fcf77262e8fb244e392c8217f330852caab3c83",
+      "size_bytes": 37887
+    },
+    {
+      "label": "bonus_pct",
+      "object_id": "column_000022",
+      "sha256": "7a4600796d202e74c7949664a56313682d2ceae30060278ade0734d92c00e82b",
+      "size_bytes": 32763
+    },
+    {
+      "label": "job_satisfaction_score",
+      "object_id": "column_000023",
+      "sha256": "db6ee8743399cb687236f94022c6e67179b999e4253e7ab9eafa4b5fe48d9b69",
+      "size_bytes": 30057
+    },
+    {
+      "label": "interviews_to_offer",
+      "object_id": "column_000024",
+      "sha256": "feb2c854f68fc11da563700c38052c1603b7cfab12f0d7b3c95aa80791742400",
+      "size_bytes": 20277
+    },
+    {
+      "label": "switched_jobs_last_year",
+      "object_id": "column_000025",
+      "sha256": "dce6d6050264704ce8f00504c4695720a46cab8781cc6707b32abe8b5eaa6b4e",
+      "size_bytes": 38760
+    },
+    {
+      "label": "upskilling_hours_per_month",
+      "object_id": "column_000026",
+      "sha256": "efc55e19e5620ff180e89875d4cd32b0864f17eb7e06e611cf863bf52378ac3b",
+      "size_bytes": 31956
+    },
+    {
+      "label": "fears_ai_automation_score",
+      "object_id": "column_000027",
+      "sha256": "9f81090044e4dcdc7a07152e4bc342945380d585e11e4cf19154803bb8d40fa8",
+      "size_bytes": 30008
+    }
+  ],
+  "run_dir": "/home/lobo/github/damicore/damicore_results_all_dataset",
+  "run_id": "a3a193949c00893f",
+  "runtime": {
+    "damicore": "0.2.0",
+    "damicore-clusterizer": "0.2.0",
+    "damicore-distance": "0.2.0",
+    "damicore-normalizer": "0.2.0",
+    "damicore-tree-builder": "0.2.0",
+    "igraph": "1.0.0",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "platform": "Linux-6.11.0-29-generic-x86_64-with-glibc2.39",
+    "pydantic": "2.13.4",
+    "python": "3.12.13",
+    "tqdm": "4.70.0",
+    "zlib_build": "1.3.2",
+    "zlib_runtime": "1.3.2"
+  },
+  "schema_version": 2,
+  "stages": {
+    "clusterizing": {
+      "finished_at": "2026-08-20T22:32:38.063992+00:00",
+      "inputs": [
+        {
+          "path": "tree.json",
+          "sha256": "873acab4190896a1c39b6a76635e901576f0ec99ff125d22577511c5f154766b",
+          "size_bytes": 10573
+        }
+      ],
+      "metrics": {
+        "cluster_count": 7,
+        "community_count": 7,
+        "modularity": 0.7200626683828123,
+        "seconds": 0.028072594999684952
+      },
+      "outputs": [
+        {
+          "path": "membership.csv",
+          "sha256": "7f1cf0ca3df3aeec7bd15ffa01e2492d2bb0ad806a4807d7e9fa3c4b78e6daba",
+          "size_bytes": 915
+        },
+        {
+          "path": "clusters.json",
+          "sha256": "883dbadfd80f99ff76c3fd4a53472387c55c091f1dfe326edc145c9eb60d1d1b",
+          "size_bytes": 2093
+        }
+      ],
+      "runtime": {
+        "damicore": "0.2.0",
+        "damicore-clusterizer": "0.2.0",
+        "damicore-distance": "0.2.0",
+        "damicore-normalizer": "0.2.0",
+        "damicore-tree-builder": "0.2.0",
+        "igraph": "1.0.0",
+        "numpy": "2.1.3",
+        "pandas": "2.2.3",
+        "platform": "Linux-6.11.0-29-generic-x86_64-with-glibc2.39",
+        "pydantic": "2.13.4",
+        "python": "3.12.13",
+        "tqdm": "4.70.0",
+        "zlib_build": "1.3.2",
+        "zlib_runtime": "1.3.2"
+      },
+      "started_at": "2026-08-20T22:32:38.036130+00:00",
+      "status": "completed"
+    },
+    "distancing": {
+      "finished_at": "2026-08-20T22:32:37.974663+00:00",
+      "inputs": [
+        {
+          "path": "normalization/manifest.json",
+          "sha256": "754cb3717e52272f5375a7c61ed531436f264affaa95cb57c3215beee1d3605a",
+          "size_bytes": 7089
+        }
+      ],
+      "metrics": {
+        "object_count": 27,
+        "pair_count": 351,
+        "seconds": 0.8617384579993086
+      },
+      "outputs": [
+        {
+          "path": "distance.npy",
+          "sha256": "d1a93514326a53626e094a0f679995b10ee0e9e56e817c770d6cf489e2f9d634",
+          "size_bytes": 5960
+        },
+        {
+          "path": "labels.json",
+          "sha256": "2ef65be7110597300b666e23e24ba41f47223c3b083496c6e41129650697c280",
+          "size_bytes": 1281
+        },
+        {
+          "path": "checkpoints/compressed-sizes.json",
+          "sha256": "c6e1d635f76e322a2ffd99d9602ee97eaebfd3b75453dd9cb4cfe3c3bd552c0b",
+          "size_bytes": 1451
+        },
+        {
+          "path": "checkpoints/distance-shards.json",
+          "sha256": "92e15aec8187558cd9824adedc194ba7b64c01e0201a99eed1a8aeadebf9a733",
+          "size_bytes": 1328
+        }
+      ],
+      "runtime": {
+        "damicore": "0.2.0",
+        "damicore-clusterizer": "0.2.0",
+        "damicore-distance": "0.2.0",
+        "damicore-normalizer": "0.2.0",
+        "damicore-tree-builder": "0.2.0",
+        "igraph": "1.0.0",
+        "numpy": "2.1.3",
+        "pandas": "2.2.3",
+        "platform": "Linux-6.11.0-29-generic-x86_64-with-glibc2.39",
+        "pydantic": "2.13.4",
+        "python": "3.12.13",
+        "tqdm": "4.70.0",
+        "zlib_build": "1.3.2",
+        "zlib_runtime": "1.3.2"
+      },
+      "started_at": "2026-08-20T22:32:37.113270+00:00",
+      "status": "completed"
+    },
+    "normalizing": {
+      "finished_at": "2026-08-20T22:32:37.098974+00:00",
+      "inputs": [
+        {
+          "path": "/home/lobo/github/damicore/my_datasets/dataset_ai_ds_job_salaries_2026.csv",
+          "sha256": "9f5a38a665df96d6a4f039bb5e38b5e5c5591045c9fd7f7afe3f38d9666f6867",
+          "size_bytes": 720914
+        }
+      ],
+      "metrics": {
+        "normalized_bytes": 990455,
+        "object_count": 27,
+        "seconds": 0.2044901379995281
+      },
+      "outputs": [
+        {
+          "path": "normalization/manifest.json",
+          "sha256": "754cb3717e52272f5375a7c61ed531436f264affaa95cb57c3215beee1d3605a",
+          "size_bytes": 7089
+        },
+        {
+          "path": "normalization/objects/column_000001.jsonl",
+          "sha256": "6a110ecd9f58c6fe0a7002e249fe61df6b38b0088cb5bbcf46cde3775792c16d",
+          "size_bytes": 97932
+        },
+        {
+          "path": "normalization/objects/column_000002.jsonl",
+          "sha256": "304bcfa9b9ff32f8b6715ac564f6514c57e9717349bf0eaca80da9d3a603ea4d",
+          "size_bytes": 38542
+        },
+        {
+          "path": "normalization/objects/column_000003.jsonl",
+          "sha256": "5bfba18c178786b1287ae14cfa1a732ece192b991762cd1c3c2bac5788468a51",
+          "size_bytes": 59582
+        },
+        {
+          "path": "normalization/objects/column_000004.jsonl",
+          "sha256": "088b9270db3f2262fa3a5f8929ea06f557df6b846a17014c8128ae9d7054b9ba",
+          "size_bytes": 20000
+        },
+        {
+          "path": "normalization/objects/column_000005.jsonl",
+          "sha256": "1d949aae0291312a95216960ebd4758db38d60761de76269116ef78d26ed589c",
+          "size_bytes": 25000
+        },
+        {
+          "path": "normalization/objects/column_000006.jsonl",
+          "sha256": "1b417e2d64487d4e31e95397b069c1196d5ce1c208896b2e9b449d6bd1755f48",
+          "size_bytes": 25000
+        },
+        {
+          "path": "normalization/objects/column_000007.jsonl",
+          "sha256": "d33f0997fd0797ba6dfdfee91ed19b3dc7037dcf01aa90dbafef719557786c66",
+          "size_bytes": 59341
+        },
+        {
+          "path": "normalization/objects/column_000008.jsonl",
+          "sha256": "65ab056b8c7fc94ead991d971dec6b9d334db0a58571928b9ae2ee2bf12cc8d0",
+          "size_bytes": 24308
+        },
+        {
+          "path": "normalization/objects/column_000009.jsonl",
+          "sha256": "a0167f0a7fd0abff03525b2e3b8c77acb521e246198bfa449b470b4f6842c9b2",
+          "size_bytes": 31815
+        },
+        {
+          "path": "normalization/objects/column_000010.jsonl",
+          "sha256": "178ca7d578a123a79dc70198fe63e54d60456de1c79434e49f9b4b0d0e285aa0",
+          "size_bytes": 53351
+        },
+        {
+          "path": "normalization/objects/column_000011.jsonl",
+          "sha256": "bcda2387af1cc66abf8f6dcc576f3ef5ca4ac56b5c55e5fb9397263b7bf1c1d4",
+          "size_bytes": 39786
+        },
+        {
+          "path": "normalization/objects/column_000012.jsonl",
+          "sha256": "08655103e376e6151d53c66158f44eaeac38979f0a6a2b059b56e923d9f21309",
+          "size_bytes": 38172
+        },
+        {
+          "path": "normalization/objects/column_000013.jsonl",
+          "sha256": "a069f9f2efab60e4fbe896eacabdaf6757dd8c564ad6954d9422f31bd5d7dae6",
+          "size_bytes": 38860
+        },
+        {
+          "path": "normalization/objects/column_000014.jsonl",
+          "sha256": "371ff2a5ef10ff2d344bafd361d542749da2fc54cacf5fbc205a5d425156c0f0",
+          "size_bytes": 21326
+        },
+        {
+          "path": "normalization/objects/column_000015.jsonl",
+          "sha256": "155e0162ab47eae107f81a3ab003b5a270a5b2dca63a870c25918b46b15b6a2c",
+          "size_bytes": 20000
+        },
+        {
+          "path": "normalization/objects/column_000016.jsonl",
+          "sha256": "dbd5719ded5fde1faa25a59ab97e2c1344ce3273b58a8da599479bf61b46bbc1",
+          "size_bytes": 35000
+        },
+        {
+          "path": "normalization/objects/column_000017.jsonl",
+          "sha256": "6b9bfc1627e245bebc580a9d48808b4f685caab59d64a5154c5b831bd16f718a",
+          "size_bytes": 36484
+        },
+        {
+          "path": "normalization/objects/column_000018.jsonl",
+          "sha256": "1357e253ad3cfffea1e1248ee67cf79d90ff34c273e3e26d1db2e23fea55bbfd",
+          "size_bytes": 32065
+        },
+        {
+          "path": "normalization/objects/column_000019.jsonl",
+          "sha256": "06ee49d30417c9d365ab5e4ab48cf0b9d4f31a0e3f3ff8fa9a54919293ac247c",
+          "size_bytes": 30000
+        },
+        {
+          "path": "normalization/objects/column_000020.jsonl",
+          "sha256": "eef5657ed5e1b158468e666d9e36c280d527017638fb47dd83c468f3c0056116",
+          "size_bytes": 42183
+        },
+        {
+          "path": "normalization/objects/column_000021.jsonl",
+          "sha256": "6aab8dc13fa9a5dbdb22cfcc5fcf77262e8fb244e392c8217f330852caab3c83",
+          "size_bytes": 37887
+        },
+        {
+          "path": "normalization/objects/column_000022.jsonl",
+          "sha256": "7a4600796d202e74c7949664a56313682d2ceae30060278ade0734d92c00e82b",
+          "size_bytes": 32763
+        },
+        {
+          "path": "normalization/objects/column_000023.jsonl",
+          "sha256": "db6ee8743399cb687236f94022c6e67179b999e4253e7ab9eafa4b5fe48d9b69",
+          "size_bytes": 30057
+        },
+        {
+          "path": "normalization/objects/column_000024.jsonl",
+          "sha256": "feb2c854f68fc11da563700c38052c1603b7cfab12f0d7b3c95aa80791742400",
+          "size_bytes": 20277
+        },
+        {
+          "path": "normalization/objects/column_000025.jsonl",
+          "sha256": "dce6d6050264704ce8f00504c4695720a46cab8781cc6707b32abe8b5eaa6b4e",
+          "size_bytes": 38760
+        },
+        {
+          "path": "normalization/objects/column_000026.jsonl",
+          "sha256": "efc55e19e5620ff180e89875d4cd32b0864f17eb7e06e611cf863bf52378ac3b",
+          "size_bytes": 31956
+        },
+        {
+          "path": "normalization/objects/column_000027.jsonl",
+          "sha256": "9f81090044e4dcdc7a07152e4bc342945380d585e11e4cf19154803bb8d40fa8",
+          "size_bytes": 30008
+        }
+      ],
+      "runtime": {
+        "damicore": "0.2.0",
+        "damicore-clusterizer": "0.2.0",
+        "damicore-distance": "0.2.0",
+        "damicore-normalizer": "0.2.0",
+        "damicore-tree-builder": "0.2.0",
+        "igraph": "1.0.0",
+        "numpy": "2.1.3",
+        "pandas": "2.2.3",
+        "platform": "Linux-6.11.0-29-generic-x86_64-with-glibc2.39",
+        "pydantic": "2.13.4",
+        "python": "3.12.13",
+        "tqdm": "4.70.0",
+        "zlib_build": "1.3.2",
+        "zlib_runtime": "1.3.2"
+      },
+      "started_at": "2026-08-20T22:32:36.896985+00:00",
+      "status": "completed"
+    },
+    "tree_building": {
+      "finished_at": "2026-08-20T22:32:38.023620+00:00",
+      "inputs": [
+        {
+          "path": "distance.npy",
+          "sha256": "d1a93514326a53626e094a0f679995b10ee0e9e56e817c770d6cf489e2f9d634",
+          "size_bytes": 5960
+        },
+        {
+          "path": "labels.json",
+          "sha256": "2ef65be7110597300b666e23e24ba41f47223c3b083496c6e41129650697c280",
+          "size_bytes": 1281
+        }
+      ],
+      "metrics": {
+        "leaf_count": 27,
+        "negative_branch_count": 0,
+        "seconds": 0.03567687599934288
+      },
+      "outputs": [
+        {
+          "path": "tree.json",
+          "sha256": "873acab4190896a1c39b6a76635e901576f0ec99ff125d22577511c5f154766b",
+          "size_bytes": 10573
+        },
+        {
+          "path": "tree.nwk",
+          "sha256": "3276077f95c4d685d59f1702de0860e7bdcb74e887fff6cf05617874aa19d2c9",
+          "size_bytes": 1802
+        }
+      ],
+      "runtime": {
+        "damicore": "0.2.0",
+        "damicore-clusterizer": "0.2.0",
+        "damicore-distance": "0.2.0",
+        "damicore-normalizer": "0.2.0",
+        "damicore-tree-builder": "0.2.0",
+        "igraph": "1.0.0",
+        "numpy": "2.1.3",
+        "pandas": "2.2.3",
+        "platform": "Linux-6.11.0-29-generic-x86_64-with-glibc2.39",
+        "pydantic": "2.13.4",
+        "python": "3.12.13",
+        "tqdm": "4.70.0",
+        "zlib_build": "1.3.2",
+        "zlib_runtime": "1.3.2"
+      },
+      "started_at": "2026-08-20T22:32:37.988130+00:00",
+      "status": "completed"
+    }
+  },
+  "status": "completed",
+  "updated_at": "2026-08-20T22:32:38.090610+00:00",
+  "warnings": []
+}

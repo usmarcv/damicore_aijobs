@@ -1,0 +1,67 @@
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[dependency-groups]
+dev = [
+    "build>=1.2,<2",
+    "hypothesis>=6,<7",
+    "ipykernel>=6,<7",
+    "matplotlib>=3.8,<4",
+    "nbclient>=0.10,<1",
+    "nbformat>=5.10,<6",
+    "pandas-stubs>=2.2,<4",
+    "pip-audit>=2.9,<3",
+    "pre-commit>=4,<5",
+    "pyright>=1.1,<2",
+    "pytest>=8,<10",
+    "pytest-cov>=6,<8",
+    "ruff>=0.15,<0.17",
+    "twine>=7,<8",
+]
+
+[tool.uv.sources]
+damicore-normalizer = { workspace = true }
+damicore-distance = { workspace = true }
+damicore-tree-builder = { workspace = true }
+damicore-clusterizer = { workspace = true }
+
+# Ruff resolves its configuration per file, walking up to the nearest pyproject that declares
+# this section, so a package's copy governs that package and nothing above it. This one is what
+# `tests`, `benchmarks` and `.github/scripts` are linted by; without it they fall back to Ruff's
+# defaults and `make check` checks them against rules this repository never chose. Held equal to
+# the package sections by tests/architecture/test_boundaries.py.
+[tool.ruff]
+line-length = 100
+exclude = [".venv", "dist", "__pycache__"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "RUF100", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["packages", "tests"]
+# Using a marker outside the registry below is a collection error, not a warning:
+# the registry is a contract only if a name outside it fails.
+addopts = "--strict-markers"
+markers = [
+    "unit: fast isolated unit tests",
+    "contract: cross-package contract tests",
+    "e2e: complete pipeline tests",
+    "notebook: executable notebook tests",
+    "slow: stress and benchmark-adjacent tests",
+]
+
+[tool.coverage.run]
+branch = true
+source = [
+    "damicore",
+    "damicore_normalizer",
+    "damicore_distance",
+    "damicore_tree_builder",
+    "damicore_clusterizer",
+    "synthetic_data",
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 90
